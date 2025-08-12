@@ -6,13 +6,83 @@
         <title>My Website</title>
         <link rel="stylesheet" href="styles.css" />
         <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@5"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         />
-        <script src="script.js"></script>
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <script src="scripts.js"></script>
     </head>
     <body>
-        <div class="navigasi">
+        <div class="navbar bg-base-100 shadow-sm">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div
+                        tabindex="0"
+                        role="button"
+                        class="btn btn-ghost lg:hidden"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16"
+                            />
+                        </svg>
+                    </div>
+                    <ul
+                        tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+                    >
+                        <li><a>Item 1</a></li>
+                        <li>
+                            <a>Parent</a>
+                            <ul class="p-2">
+                                <li><a>Submenu 1</a></li>
+                                <li><a>Submenu 2</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Item 3</a></li>
+                    </ul>
+                </div>
+                <a class="btn btn-ghost text-xl">daisyUI</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a>Item 1</a></li>
+                    <li>
+                        <details>
+                            <summary>Parent</summary>
+                            <ul class="p-2">
+                                <li><a>Submenu 1</a></li>
+                                <li><a>Submenu 2</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li><a>Item 3</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <a class="btn">Button</a>
+            </div>
+        </div>
+        <!-- <div class="navigasi">
             <nav>
                 <ul>
                     <li><a href="#pengertian">Pengertian</a></li>
@@ -21,21 +91,32 @@
                     <li><a href="#quiz">Quiz</a></li>
                 </ul>
             </nav>
-        </div>
+        </div> -->
+        <header>
+            <h1>HIMBAUAN MENERAPKAN</h1>
+            <h2>4 Sehat 5 Sempurna</h2>
+            <p class="hero-subtitle">
+                Pola hidup sehat untuk generasi yang lebih baik
+            </p>
+            <div class="hero-buttons">
+                <a href="#komponen" class="btn-primary">Pelajari Komponen</a>
+                <a href="#quiz" class="btn-secondary">Ikuti Quiz</a>
+            </div>
+        </header>
         <div class="container">
-            <header>
-                <h1>HIMBAUAN MENERAPKAN</h1>
-                <h2>4 Sehat 5 Sempurna</h2>
-            </header>
             <div class="content">
-                <h1>Pengertian</h1>
+                <h1 id="pengertian">Pengertian</h1>
                 <p>
-                    HIMBAUAN MENERAPKAN 4 SEHAT 5 SEMPURNA adalah sebuah program
-                    yang bertujuan untuk meningkatkan kesehatan dan kualitas
-                    hidup masyarakat melalui empat aspek penting dalam kehidupan
-                    sehari-hari.
+                    lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.
                 </p>
-                <h1>Komponen</h1>
+                <h1 id="komponen">Komponen</h1>
                 <p>
                     HIMBAUAN MENERAPKAN 4 SEHAT 5 SEMPURNA terdiri dari empat
                     komponen utama yang harus diterapkan dalam kehidupan
@@ -48,7 +129,7 @@
                     <li><a href="komponen/buah.html">Buah Buahan</a></li>
                     <li><a href="komponen/susu.html">Minuman Susu</a></li>
                 </ol>
-                <h1>Manfaat</h1>
+                <h1 id="manfaat">Manfaat</h1>
                 <p>
                     HIMBAUAN MENERAPKAN 4 SEHAT 5 SEMPURNA memiliki banyak
                     manfaat bagi masyarakat, diantaranya:
@@ -59,7 +140,7 @@
                     <li>Meningkatkan kualitas hidup</li>
                     <li>Membuat hidup lebih menyenangkan</li>
                 </ul>
-                <h1>Quiz</h1>
+                <h1 id="quiz">Quiz</h1>
                 <p>
                     HIMBAUAN MENERAPKAN 4 SEHAT 5 SEMPURNA juga menyediakan quiz
                     untuk memeriksa tingkat pemahaman masyarakat tentang program
