@@ -13,50 +13,14 @@ html {
 
 /* body */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
     background-color: #f5f5f5;
     margin: 0;
     padding: 0;
     padding-top: 80px; /* Account for fixed nav */
 }
 
-/* navigation */
-/* nav {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    position: fixed;
-    top: 0;
-    width: 98%;
-    z-index: 1000;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-nav li {
-    margin-left: 20px;
-    font-size: 18px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 8px 12px;
-    border-radius: 4px;
-    display: block;
-}
-
-nav a:hover {
-    background-color: #555;
-    color: #fff;
-} */
+/* navigation - cleaned up for DaisyUI integration */
 
 /* header */
 header {
@@ -206,106 +170,188 @@ header h2 {
     padding: 0;
 }
 
-/* Enhanced navbar styles */
+/* Modern Navbar Styles */
 .navbar {
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-    background: rgba(31, 41, 55, 0.95) !important;
+    height: 80px;
+    padding: 0 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.navbar * {
-    color: white !important;
-}
-
-.navbar .btn-ghost {
-    color: white !important;
-}
-
-.navbar .btn-ghost:hover {
-    background-color: rgba(255, 255, 255, 0.1) !important;
-    color: white !important;
+    box-shadow:
+        0 1px 3px 0 rgba(0, 0, 0, 0.1),
+        0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    align-items: center;
+    justify-content: space-between;
 }
 
 .navbar.scrolled {
-    background: rgba(51, 51, 51, 0.98) !important;
-    backdrop-filter: blur(20px);
+    background: rgba(17, 24, 39, 0.98) !important;
+    backdrop-filter: blur(30px);
+    box-shadow:
+        0 10px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-bottom: 1px solid rgba(75, 85, 99, 0.3);
 }
 
-.navbar .dropdown-content {
-    animation: fadeIn 0.3s ease-out;
-    border: none;
-    background: white !important;
-    border-radius: 16px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-    overflow: hidden;
-}
-
-.navbar .dropdown-content li a {
-    color: #374151 !important;
-    font-weight: 500;
-    display: block !important;
-}
-
-.navbar .dropdown-content li a:hover {
-    background: linear-gradient(135deg, #8b45c1, #4f46e5) !important;
-    color: white !important;
-    transform: translateX(4px);
-    border-radius: 12px;
-    margin: 2px;
-}
-
-/* Ensure all dropdown elements are visible */
+/* Enhanced Dropdown Styles */
 .dropdown-content {
-    background: white !important;
-    color: #374151 !important;
+    animation: dropdownSlide 0.2s ease-out;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(75, 85, 99, 0.2);
+    position: absolute !important;
+    top: calc(100% + 8px) !important;
+    left: 0 !important;
+    right: auto !important;
+    transform: translateX(0) !important;
+    min-width: 220px;
+    max-width: 280px;
 }
 
-.dropdown-content * {
-    color: #374151 !important;
-}
-
-.dropdown-content a {
-    color: #374151 !important;
-    text-decoration: none;
+.dropdown-hover:hover .dropdown-content {
     display: block;
-    padding: 8px 12px;
+    animation: dropdownSlide 0.2s ease-out;
 }
 
-.dropdown-content a:hover {
-    background: linear-gradient(135deg, #8b45c1, #4f46e5) !important;
-    color: white !important;
+.dropdown-end .dropdown-content {
+    left: auto !important;
+    right: 0 !important;
+    transform: translateX(0) !important;
 }
 
-.dropdown-content i {
-    color: inherit !important;
+/* Mobile dropdown specific positioning */
+.dropdown:first-child .dropdown-content {
+    left: -16px !important;
+    transform: translateX(0) !important;
 }
 
-/* Submenu styling for nested dropdowns */
+/* Submenu improvements */
 .dropdown-content ul {
-    background: #f9fafb !important;
+    background: rgba(55, 65, 81, 0.5) !important;
     border-radius: 12px;
-    margin: 4px 0;
+    margin: 8px 0;
     padding: 8px;
+    backdrop-filter: blur(8px);
 }
 
 .dropdown-content ul li a {
-    color: #374151 !important;
     font-size: 14px;
-    padding: 6px 12px;
+    padding: 8px 16px;
     border-radius: 8px;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
+    font-weight: 500;
 }
 
 .dropdown-content ul li a:hover {
-    background: linear-gradient(135deg, #8b45c1, #4f46e5) !important;
-    color: white !important;
-    transform: translateX(2px);
+    transform: translateX(4px);
+    background: rgba(55, 65, 81, 0.8) !important;
 }
 
-.dropdown-content ul li a i {
-    margin-right: 8px;
-    font-size: 12px;
+/* Navbar brand improvements */
+.navbar .text-xl {
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Menu item hover effects */
+.menu a {
+    position: relative;
+    overflow: hidden;
+    font-weight: 500;
+    letter-spacing: 0.025em;
+    margin: 0 4px;
+}
+
+.menu a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transition: left 0.5s;
+}
+
+.menu a:hover::before {
+    left: 100%;
+}
+
+/* CTA Button enhanced styling */
+.btn-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    border: none;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0.025em;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.4);
+}
+
+/* Icon colors and effects */
+.fas {
+    transition: all 0.2s ease;
+}
+
+.dropdown-content .fas {
+    width: 16px;
+    text-align: center;
+}
+
+/* Mobile improvements */
+@media (max-width: 1023px) {
+    .navbar {
+        padding: 0 0.5rem;
+        height: 70px;
+    }
+
+    .dropdown-content {
+        margin-top: 0.75rem;
+        box-shadow:
+            0 20px 25px -5px rgba(0, 0, 0, 0.1),
+            0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        left: 0 !important;
+        right: auto !important;
+        min-width: 250px;
+    }
+
+    .navbar-start {
+        flex: none;
+        width: auto;
+        min-width: 80px;
+    }
+
+    .navbar-center {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .navbar-end {
+        flex: none;
+        width: auto;
+        min-width: 120px;
+        justify-content: flex-end;
+    }
+
+    /* Mobile dropdown full width fix */
+    .dropdown-content {
+        left: -16px !important;
+        right: 16px !important;
+        width: calc(100vw - 32px) !important;
+        max-width: 300px !important;
+    }
 }
 
 @keyframes fadeIn {
@@ -319,6 +365,17 @@ header h2 {
     }
 }
 
+@keyframes dropdownSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-8px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
 .menu a {
     transition: all 0.2s ease;
 }
@@ -328,19 +385,8 @@ header h2 {
 }
 
 .menu a.active {
-    background-color: rgba(255, 255, 255, 0.25) !important;
-    color: white !important;
     font-weight: 600;
     border-radius: 8px;
-}
-
-.navbar .menu a {
-    color: white !important;
-}
-
-.navbar .menu a:hover {
-    color: white !important;
-    background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 /* Button ripple effect */
@@ -384,6 +430,18 @@ footer {
 @media (max-width: 480px) {
     body {
         padding-top: 70px;
+    }
+
+    .dropdown-content {
+        left: -8px !important;
+        transform: translateX(0) !important;
+        width: calc(100vw - 40px) !important;
+        max-width: 280px !important;
+    }
+
+    .dropdown-end .dropdown-content {
+        right: -8px !important;
+        left: auto !important;
     }
 
     nav {
@@ -471,7 +529,7 @@ footer {
 
 @media (max-width: 768px) and (min-width: 420px) {
     body {
-        padding-top: 75px;
+        padding-top: 70px;
     }
 
     nav {

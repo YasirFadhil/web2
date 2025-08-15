@@ -5,6 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>My Website</title>
         <link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
         <link
             href="https://cdn.jsdelivr.net/npm/daisyui@5"
             rel="stylesheet"
@@ -23,157 +29,185 @@
         <script src="scripts.js"></script>
     </head>
     <body>
+        <!-- Navigation Bar -->
         <div
-            class="navbar bg-gray-900 text-white shadow-lg fixed top-0 z-50 backdrop-blur-md"
-            style="background: rgba(31, 41, 55, 0.95) !important"
+            class="navbar bg-gray-900/95 backdrop-blur-lg fixed top-0 w-full z-50 border-b border-gray-800/50 px-4 lg:px-8"
         >
             <div class="navbar-start">
-                <div class="dropdown">
+                <!-- Mobile menu -->
+                <div class="dropdown lg:hidden">
                     <div
                         tabindex="0"
                         role="button"
-                        class="btn btn-ghost lg:hidden text-white hover:bg-white/20"
+                        class="btn btn-square btn-ghost text-white"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            class="h-5 w-5"
                             fill="none"
                             viewBox="0 0 24 24"
-                            stroke="currentColor"
+                            class="inline-block w-5 h-5 stroke-current"
                         >
                             <path
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
-                                d="M4 6h16M4 12h8m-8 6h16"
-                            />
+                                d="M4 6h16M4 12h16M4 18h16"
+                            ></path>
                         </svg>
                     </div>
                     <ul
                         tabindex="0"
-                        class="menu menu-sm dropdown-content bg-base-100 text-base-content rounded-box z-[1] mt-3 w-64 p-2 shadow-xl border"
+                        class="menu menu-sm dropdown-content mt-3 z-[1000] p-3 shadow-2xl bg-gray-800 rounded-box w-64 text-white left-0"
                     >
                         <li>
                             <a
                                 href="#pengertian"
-                                class="hover:bg-primary hover:text-primary-content rounded-lg transition-all duration-200"
-                                ><i class="fas fa-info-circle mr-2"></i
+                                class="text-white hover:bg-gray-700 rounded-lg py-3"
+                                ><i class="fas fa-info-circle mr-3"></i
                                 >Pengertian</a
                             >
                         </li>
                         <li>
+                            <details>
+                                <summary
+                                    class="text-white hover:bg-gray-700 rounded-lg py-3"
+                                >
+                                    <i class="fas fa-puzzle-piece mr-3"></i
+                                    >Komponen
+                                </summary>
+                                <ul class="p-2 bg-gray-700/50 rounded-lg mt-1">
+                                    <li>
+                                        <a
+                                            href="komponen/pokok.html"
+                                            class="text-gray-200 text-sm py-2"
+                                            ><i
+                                                class="fas fa-bread-slice mr-2"
+                                            ></i
+                                            >Makanan Pokok</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="komponen/sayur.html"
+                                            class="text-gray-200 text-sm py-2"
+                                            ><i class="fas fa-leaf mr-2"></i
+                                            >Sayur Mayur</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="komponen/lauk.html"
+                                            class="text-gray-200 text-sm py-2"
+                                            ><i
+                                                class="fas fa-drumstick-bite mr-2"
+                                            ></i
+                                            >Lauk Pauk</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="komponen/buah.html"
+                                            class="text-gray-200 text-sm py-2"
+                                            ><i
+                                                class="fas fa-apple-alt mr-2"
+                                            ></i
+                                            >Buah Buahan</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="komponen/susu.html"
+                                            class="text-gray-200 text-sm py-2"
+                                            ><i
+                                                class="fas fa-glass-whiskey mr-2"
+                                            ></i
+                                            >Minuman Susu</a
+                                        >
+                                    </li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li>
                             <a
-                                href="#komponen"
-                                class="hover:bg-primary hover:text-primary-content rounded-lg transition-all duration-200"
-                                ><i class="fas fa-puzzle-piece mr-2"></i
-                                >Komponen</a
+                                href="#manfaat"
+                                class="text-white hover:bg-gray-700 rounded-lg py-3"
+                                ><i class="fas fa-heart mr-3"></i>Manfaat</a
                             >
-                            <ul class="p-2 bg-base-200 rounded-lg mt-1">
+                        </li>
+                        <li>
+                            <a
+                                href="#quiz"
+                                class="text-white hover:bg-gray-700 rounded-lg py-3"
+                                ><i class="fas fa-question-circle mr-3"></i
+                                >Quiz</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Logo/Brand -->
+                <div class="ml-4 lg:ml-0">
+                    <a
+                        class="text-white text-xl font-bold flex items-center gap-3 hover:text-blue-300 transition-colors"
+                    >
+                        <i class="fas fa-apple-alt text-green-400 text-2xl"></i>
+                        <span class="hidden sm:inline">4 Sehat 5 Sempurna</span>
+                        <span class="sm:hidden">4S5S</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Desktop menu -->
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-4 text-white gap-2">
+                    <li>
+                        <a
+                            href="#pengertian"
+                            class="hover:bg-white/10 hover:text-white rounded-lg px-4 py-2 transition-all font-medium"
+                        >
+                            <i class="fas fa-info-circle mr-2"></i>Pengertian
+                        </a>
+                    </li>
+                    <li>
+                        <div class="dropdown dropdown-hover">
+                            <div
+                                tabindex="0"
+                                role="button"
+                                class="hover:bg-white/10 hover:text-white rounded-lg px-4 py-2 transition-all font-medium cursor-pointer flex items-center"
+                            >
+                                <i class="fas fa-puzzle-piece mr-2"></i>Komponen
+                                <i class="fas fa-chevron-down ml-2 text-xs"></i>
+                            </div>
+                            <ul
+                                tabindex="0"
+                                class="dropdown-content z-[1000] menu p-3 shadow-2xl bg-gray-800 rounded-xl w-64 mt-3 text-white border border-gray-700"
+                            >
                                 <li>
                                     <a
                                         href="komponen/pokok.html"
-                                        class="text-sm hover:bg-primary hover:text-primary-content rounded"
+                                        class="hover:bg-gray-700 rounded-lg py-3 text-white"
+                                        ><i
+                                            class="fas fa-bread-slice mr-3 text-yellow-400"
+                                        ></i
                                         >Makanan Pokok</a
                                     >
                                 </li>
                                 <li>
                                     <a
                                         href="komponen/sayur.html"
-                                        class="text-sm hover:bg-primary hover:text-primary-content rounded"
+                                        class="hover:bg-gray-700 rounded-lg py-3 text-white"
+                                        ><i
+                                            class="fas fa-leaf mr-3 text-green-400"
+                                        ></i
                                         >Sayur Mayur</a
                                     >
                                 </li>
                                 <li>
                                     <a
                                         href="komponen/lauk.html"
-                                        class="text-sm hover:bg-primary hover:text-primary-content rounded"
-                                        >Lauk Pauk</a
-                                    >
-                                </li>
-                                <li>
-                                    <a
-                                        href="komponen/buah.html"
-                                        class="text-sm hover:bg-primary hover:text-primary-content rounded"
-                                        >Buah Buahan</a
-                                    >
-                                </li>
-                                <li>
-                                    <a
-                                        href="komponen/susu.html"
-                                        class="text-sm hover:bg-primary hover:text-primary-content rounded"
-                                        >Minuman Susu</a
-                                    >
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a
-                                href="#manfaat"
-                                class="hover:bg-primary hover:text-primary-content rounded-lg transition-all duration-200"
-                                ><i class="fas fa-heart mr-2"></i>Manfaat</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="#quiz"
-                                class="hover:bg-primary hover:text-primary-content rounded-lg transition-all duration-200"
-                                ><i class="fas fa-question-circle mr-2"></i
-                                >Quiz</a
-                            >
-                        </li>
-                    </ul>
-                </div>
-                <a
-                    class="btn btn-ghost text-xl font-bold text-white hover:bg-white/20 transition-all duration-200"
-                    style="color: white !important"
-                >
-                    <i class="fas fa-apple-alt mr-2"></i>4 Sehat 5 Sempurna
-                </a>
-            </div>
-            <div class="navbar-center hidden lg:flex">
-                <ul class="menu menu-horizontal px-1 gap-2">
-                    <li>
-                        <a
-                            href="#pengertian"
-                            class="hover:bg-white/20 hover:text-white rounded-lg transition-all duration-200 font-medium text-white"
-                            style="color: white !important"
-                            ><i class="fas fa-info-circle mr-2"></i
-                            >Pengertian</a
-                        >
-                    </li>
-                    <li>
-                        <details class="dropdown">
-                            <summary
-                                class="hover:bg-white/20 hover:text-white rounded-lg transition-all duration-200 font-medium cursor-pointer text-white"
-                                style="color: white !important"
-                            >
-                                <i class="fas fa-puzzle-piece mr-2"></i>Komponen
-                            </summary>
-                            <ul
-                                class="dropdown-content menu bg-base-100 text-base-content rounded-box z-[1] w-64 p-2 shadow-xl border mt-2"
-                            >
-                                <li>
-                                    <a
-                                        href="komponen/pokok.html"
-                                        class="hover:bg-primary hover:text-primary-content rounded-lg transition-all duration-200"
-                                        ><i class="fas fa-bread-slice mr-2"></i
-                                        >Makanan Pokok</a
-                                    >
-                                </li>
-                                <li>
-                                    <a
-                                        href="komponen/sayur.html"
-                                        class="hover:bg-primary hover:text-primary-content rounded-lg transition-all duration-200"
-                                        ><i class="fas fa-leaf mr-2"></i>Sayur
-                                        Mayur</a
-                                    >
-                                </li>
-                                <li>
-                                    <a
-                                        href="komponen/lauk.html"
-                                        class="hover:bg-primary hover:text-primary-content rounded-lg transition-all duration-200"
+                                        class="hover:bg-gray-700 rounded-lg py-3 text-white"
                                         ><i
-                                            class="fas fa-drumstick-bite mr-2"
+                                            class="fas fa-drumstick-bite mr-3 text-red-400"
                                         ></i
                                         >Lauk Pauk</a
                                     >
@@ -181,84 +215,93 @@
                                 <li>
                                     <a
                                         href="komponen/buah.html"
-                                        class="hover:bg-primary hover:text-primary-content rounded-lg transition-all duration-200"
-                                        ><i class="fas fa-apple-alt mr-2"></i
+                                        class="hover:bg-gray-700 rounded-lg py-3 text-white"
+                                        ><i
+                                            class="fas fa-apple-alt mr-3 text-orange-400"
+                                        ></i
                                         >Buah Buahan</a
                                     >
                                 </li>
                                 <li>
                                     <a
                                         href="komponen/susu.html"
-                                        class="hover:bg-primary hover:text-primary-content rounded-lg transition-all duration-200"
+                                        class="hover:bg-gray-700 rounded-lg py-3 text-white"
                                         ><i
-                                            class="fas fa-glass-whiskey mr-2"
+                                            class="fas fa-glass-whiskey mr-3 text-blue-400"
                                         ></i
                                         >Minuman Susu</a
                                     >
                                 </li>
                             </ul>
-                        </details>
+                        </div>
                     </li>
                     <li>
                         <a
                             href="#manfaat"
-                            class="hover:bg-white/20 hover:text-white rounded-lg transition-all duration-200 font-medium text-white"
-                            style="color: white !important"
-                            ><i class="fas fa-heart mr-2"></i>Manfaat</a
+                            class="hover:bg-white/10 hover:text-white rounded-lg px-4 py-2 transition-all font-medium"
                         >
+                            <i class="fas fa-heart mr-2"></i>Manfaat
+                        </a>
                     </li>
                     <li>
                         <a
                             href="#quiz"
-                            class="hover:bg-white/20 hover:text-white rounded-lg transition-all duration-200 font-medium text-white"
-                            style="color: white !important"
-                            ><i class="fas fa-question-circle mr-2"></i>Quiz</a
+                            class="hover:bg-white/10 hover:text-white rounded-lg px-4 py-2 transition-all font-medium"
                         >
+                            <i class="fas fa-question-circle mr-2"></i>Quiz
+                        </a>
                     </li>
                 </ul>
             </div>
-            <div class="navbar-end gap-2">
+
+            <!-- Right side -->
+            <div class="navbar-end gap-3">
+                <!-- User menu -->
                 <div class="dropdown dropdown-end">
                     <div
                         tabindex="0"
                         role="button"
-                        class="btn btn-ghost btn-circle text-white hover:bg-white/20"
-                        style="color: white !important"
+                        class="btn btn-ghost btn-circle text-white hover:bg-white/10"
                     >
-                        <i class="fas fa-user"></i>
+                        <i class="fas fa-user text-lg"></i>
                     </div>
                     <ul
                         tabindex="0"
-                        class="dropdown-content menu bg-base-100 text-base-content rounded-box z-[1] w-52 p-2 shadow-xl border mt-2"
+                        class="dropdown-content z-[1000] menu p-3 shadow-2xl bg-gray-800 rounded-xl w-52 mt-3 text-white border border-gray-700"
                     >
                         <li>
                             <a
-                                class="hover:bg-gradient-to-r hover:from-purple-500 hover:to-indigo-600 hover:text-white rounded-xl transition-all duration-300 py-2 px-3"
-                                style="color: #374151 !important"
-                                ><i class="fas fa-user-circle mr-2"></i
+                                class="hover:bg-gray-700 rounded-lg py-3 text-white"
+                                ><i
+                                    class="fas fa-user-circle mr-3 text-blue-400"
+                                ></i
                                 >Profile</a
                             >
                         </li>
                         <li>
                             <a
-                                class="hover:bg-gradient-to-r hover:from-purple-500 hover:to-indigo-600 hover:text-white rounded-xl transition-all duration-300 py-2 px-3"
-                                style="color: #374151 !important"
-                                ><i class="fas fa-cog mr-2"></i>Settings</a
+                                class="hover:bg-gray-700 rounded-lg py-3 text-white"
+                                ><i class="fas fa-cog mr-3 text-gray-400"></i
+                                >Settings</a
                             >
                         </li>
+                        <div class="divider my-1"></div>
                         <li>
                             <a
-                                class="hover:bg-gradient-to-r hover:from-purple-500 hover:to-indigo-600 hover:text-white rounded-xl transition-all duration-300 py-2 px-3"
-                                style="color: #374151 !important"
-                                ><i class="fas fa-sign-out-alt mr-2"></i
+                                class="hover:bg-red-600 rounded-lg py-3 text-white"
+                                ><i
+                                    class="fas fa-sign-out-alt mr-3 text-red-400"
+                                ></i
                                 >Logout</a
                             >
                         </li>
                     </ul>
                 </div>
+
+                <!-- CTA Button -->
                 <a
                     href="#quiz"
-                    class="btn btn-accent btn-sm hidden sm:flex font-medium shadow-lg hover:shadow-xl transition-all duration-200"
+                    class="btn btn-primary btn-sm hidden sm:flex font-medium shadow-lg hover:shadow-xl transition-all px-4 py-2"
                 >
                     <i class="fas fa-play mr-2"></i>Mulai Quiz
                 </a>
