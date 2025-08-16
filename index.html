@@ -257,14 +257,14 @@
             <!-- Right side -->
             <div class="navbar-end gap-3">
                 <!-- Quiz CTA Button -->
-                <button
+                <!-- <button
                     id="navbarQuizBtn"
-                    class="btn btn-primary btn-sm hidden sm:inline-flex items-center gap-2 font-semibold shadow-lg hover:shadow-xl transition-all duration-300 px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white border-0"
+                    class="btn btn-primary btn-sm hidden sm:inline-flex items-center gap-2 font-semibold shadow-lg hover:shadow-xl transition-all duration-300 px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white border-0 "
                     onclick="console.log('Navbar button clicked!'); document.getElementById('quizModal').style.display='flex'; document.getElementById('quizModal').classList.add('modal-open');"
                 >
                     <i class="fas fa-brain text-sm"></i>
                     <span>Quiz</span>
-                </button>
+                </button> -->
 
                 <!-- User menu -->
                 <div class="dropdown dropdown-end">
@@ -396,14 +396,15 @@
                 </ul>
 
                 <!-- Quiz Modal Button -->
-                <div
-                    class="w-full flex justify-center items-center mt-12 mb-8 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-100"
-                >
+                <div>
                     <div class="text-center">
                         <button
                             id="startQuizBtn"
                             type="button"
-                            class="btn btn-lg bg-gradient-to-r from-blue-500 to-blue-600 text-white border-none hover:from-blue-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                            class="btn btn-lg bg-gradient-to-r from-blue-500 to-blue-600 text-white border-none 
+                            hover:from-blue-600 hover:to-blue-700 transform hover:scale-105 transition-all 
+                            duration-300 shadow-lg hover:shadow-xl rounded-full px-6 py-3 flex items-center 
+                            justify-center gap-2"
                         >
                             <i class="fas fa-brain mr-2"></i>
                             <span>Mulai Quiz</span>
@@ -511,48 +512,5 @@
                 </div>
             </div>
         </footer>
-
-        <!-- Test JavaScript -->
-        <script>
-            console.log("Testing quiz functionality...");
-
-            function testQuiz() {
-                console.log("testQuiz function called");
-                alert("Test function works!");
-                var modal = document.getElementById("quizModal");
-                console.log("Modal element:", modal);
-                if (modal) {
-                    modal.style.display = "flex";
-                    console.log("Modal should now be visible");
-                } else {
-                    console.error("Modal not found!");
-                }
-            }
-
-            // Wait for DOM to be fully loaded
-            document.addEventListener("DOMContentLoaded", function () {
-                console.log("DOM fully loaded");
-
-                var startBtn = document.getElementById("startQuizBtn");
-                console.log("Start button found:", startBtn);
-
-                if (startBtn) {
-                    startBtn.addEventListener("click", function () {
-                        console.log("Start button clicked via event listener");
-                        testQuiz();
-                    });
-                    console.log("Event listener added to start button");
-                } else {
-                    console.error("Start button not found!");
-                }
-
-                // Test if elements exist
-                console.log("All elements check:", {
-                    startBtn: document.getElementById("startQuizBtn"),
-                    modal: document.getElementById("quizModal"),
-                    navbar: document.getElementById("navbarQuizBtn"),
-                });
-            });
-        </script>
     </body>
 </html>
