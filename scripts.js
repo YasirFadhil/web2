@@ -38,14 +38,20 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Enhanced dropdown management
+// Enhanced dropdown management with backdrop
 function closeMobileDropdown() {
   const dropdownToggle = document.querySelector('.dropdown [role="button"]');
   const dropdownContent = document.querySelector(".dropdown .dropdown-content");
+  const backdrop = document.querySelector(".mobile-menu-backdrop");
 
   if (dropdownToggle) {
     dropdownToggle.blur();
     document.activeElement.blur();
+  }
+
+  // Remove backdrop
+  if (backdrop) {
+    backdrop.classList.remove("active");
   }
 
   // Remove focus from dropdown content
@@ -54,6 +60,25 @@ function closeMobileDropdown() {
     setTimeout(() => {
       dropdownContent.style.display = "";
     }, 100);
+  }
+}
+
+// Create backdrop element
+function createBackdrop() {
+  if (!document.querySelector(".mobile-menu-backdrop")) {
+    const backdrop = document.createElement("div");
+    backdrop.className = "mobile-menu-backdrop";
+    backdrop.addEventListener("click", closeMobileDropdown);
+    document.body.appendChild(backdrop);
+  }
+}
+
+// Show backdrop when mobile menu opens
+function showBackdrop() {
+  createBackdrop();
+  const backdrop = document.querySelector(".mobile-menu-backdrop");
+  if (backdrop && window.innerWidth <= 1023) {
+    backdrop.classList.add("active");
   }
 }
 
@@ -73,7 +98,79 @@ function closeAllDropdowns() {
   allToggleButtons.forEach((toggle) => {
     toggle.blur();
   });
+
+  // Remove backdrop
+  const backdrop = document.querySelector(".mobile-menu-backdrop");
+  if (backdrop) {
+    backdrop.classList.remove("active");
+  }
 }
+
+// Enhanced mobile menu interactions
+document.addEventListener("DOMContentLoaded", function () {
+  // Mobile menu toggle handler
+  const mobileMenuToggle = document.querySelector('.dropdown [role="button"]');
+
+  if (mobileMenuToggle) {
+    mobileMenuToggle.addEventListener("click", function () {
+      setTimeout(() => {
+        const dropdownContent = document.querySelector(
+          ".dropdown .dropdown-content",
+        );
+        if (
+          dropdownContent &&
+          getComputedStyle(dropdownContent).display !== "none"
+        ) {
+          showBackdrop();
+        }
+      }, 100);
+    });
+  }
+
+  // Close menu when clicking on menu links
+  const menuLinks = document.querySelectorAll('.dropdown-content a[href^="#"]');
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      setTimeout(() => {
+        closeMobileDropdown();
+      }, 100);
+    });
+  });
+
+  // Close menu on window resize if it's open
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 1023) {
+      closeMobileDropdown();
+    }
+  });
+
+  // Prevent body scroll when mobile menu is open
+  const observer = new MutationObserver(function (mutations) {
+    mutations.forEach(function (mutation) {
+      if (
+        mutation.type === "attributes" &&
+        mutation.attributeName === "class"
+      ) {
+        const backdrop = document.querySelector(".mobile-menu-backdrop");
+        if (backdrop && backdrop.classList.contains("active")) {
+          document.body.style.overflow = "hidden";
+        } else {
+          document.body.style.overflow = "";
+        }
+      }
+    });
+  });
+
+  // Start observing backdrop changes
+  createBackdrop();
+  const backdrop = document.querySelector(".mobile-menu-backdrop");
+  if (backdrop) {
+    observer.observe(backdrop, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+  }
+});
 
 // Fix dropdown positioning on window resize
 function fixDropdownPositions() {
