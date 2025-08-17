@@ -255,59 +255,7 @@
             </div>
 
             <!-- Right side -->
-            <div class="navbar-end gap-3">
-                <!-- Quiz CTA Button -->
-                <!-- <button
-                    id="navbarQuizBtn"
-                    class="btn btn-primary btn-sm hidden sm:inline-flex items-center gap-2 font-semibold shadow-lg hover:shadow-xl transition-all duration-300 px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white border-0 "
-                    onclick="console.log('Navbar button clicked!'); document.getElementById('quizModal').style.display='flex'; document.getElementById('quizModal').classList.add('modal-open');"
-                >
-                    <i class="fas fa-brain text-sm"></i>
-                    <span>Quiz</span>
-                </button> -->
-
-                <!-- User menu -->
-                <div class="dropdown dropdown-end">
-                    <div
-                        tabindex="0"
-                        role="button"
-                        class="btn btn-ghost btn-circle text-white hover:bg-white/10"
-                    >
-                        <i class="fas fa-user text-lg"></i>
-                    </div>
-                    <ul
-                        tabindex="0"
-                        class="dropdown-content z-[1000] menu p-3 shadow-2xl bg-gray-800 rounded-xl w-52 mt-3 text-white border border-gray-700"
-                    >
-                        <li>
-                            <a
-                                class="hover:bg-gray-700 rounded-lg py-3 text-white"
-                                ><i
-                                    class="fas fa-user-circle mr-3 text-blue-400"
-                                ></i
-                                >Profile</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                class="hover:bg-gray-700 rounded-lg py-3 text-white"
-                                ><i class="fas fa-cog mr-3 text-gray-400"></i
-                                >Settings</a
-                            >
-                        </li>
-                        <div class="divider my-1"></div>
-                        <li>
-                            <a
-                                class="hover:bg-red-600 rounded-lg py-3 text-white"
-                                ><i
-                                    class="fas fa-sign-out-alt mr-3 text-red-400"
-                                ></i
-                                >Logout</a
-                            >
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <div class="navbar-end gap-3"></div>
         </div>
 
         <!-- Header Section -->
@@ -328,15 +276,23 @@
             <div class="content">
                 <!-- Pengertian Section -->
                 <h1 id="pengertian">Pengertian</h1>
-                <p>
-                    4 Sehat 5 Sempurna adalah pedoman gizi seimbang yang terdiri
-                    dari empat komponen makanan utama ditambah susu sebagai
-                    pelengkap. Konsep ini bertujuan untuk memenuhi kebutuhan
-                    nutrisi harian tubuh agar tetap sehat dan kuat. Setiap
-                    komponen memiliki peran penting dalam menjaga kesehatan dan
-                    mendukung pertumbuhan optimal.
-                </p>
-
+                <div
+                    class="flex flex-col lg:flex-row items-center gap-6 lg:gap-10 mb-6"
+                >
+                    <img
+                        src="/assets/4sehat5sempurna.png"
+                        alt="4 Sehat 5 Sempurna"
+                        class="w-64 lg:w-80 h-64 lg:h-80 rounded-full object-cover flex-shrink-0"
+                    />
+                    <p class="text-base lg:text-lg text-center lg:text-left">
+                        <b class="t">4 Sehat 5 Sempurna</b> adalah konsep
+                        pedoman gizi yang diperkenalkan oleh pemerintah
+                        Indonesia untuk meningkatkan kesadaran masyarakat
+                        tentang pentingnya gizi seimbang. Konsep ini menekankan
+                        pentingnya mengonsumsi makanan yang beragam dan seimbang
+                        untuk menjaga kesehatan.
+                    </p>
+                </div>
                 <!-- Komponen Section -->
                 <h1 id="komponen">Komponen</h1>
                 <p>
@@ -394,16 +350,16 @@
                     <li>Manfaat dari setiap komponen</li>
                     <li>Penerapan dalam kehidupan sehari-hari</li>
                 </ul>
-
+                <br />
                 <!-- Quiz Modal Button -->
                 <div>
                     <div class="text-center">
                         <button
                             id="startQuizBtn"
                             type="button"
-                            class="btn btn-lg bg-gradient-to-r from-blue-500 to-blue-600 text-white border-none hover:from-blue-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl rounded-full px-6 py-3 flex items-center justify-center gap-2"
+                            class="btn btn-lg bg-gradient-to-r from-blue-500 to-blue-600 text-white border-none hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl rounded-full px-6 py-3 flex items-center justify-center gap-2"
                         >
-                            <i class="fas fa-brain mr-2"></i>
+                            <!-- <i class="fas fa-brain mr-2"></i> -->
                             <span>Mulai Quiz</span>
                         </button>
                     </div>

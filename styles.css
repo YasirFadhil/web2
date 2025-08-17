@@ -164,7 +164,7 @@ header h2 {
 }
 
 .content p {
-    font-size: 16px;
+    /*font-size: 16px;*/
     line-height: 1.6;
     margin-bottom: 20px;
     padding: 0;
@@ -1006,6 +1006,7 @@ footer {
 
     .btn-primary,
     .btn-secondary {
+        color: white;
         padding: 18px 35px;
         font-size: 1.1rem;
     }
@@ -3294,5 +3295,57 @@ footer {
     .feedback-popup {
         font-size: 1rem;
         padding: 0.75rem 1.25rem;
+    }
+}
+
+/* Komponen Layout Responsive */
+@media (max-width: 640px) {
+    .grid-cols-1.sm\:grid-cols-2.md\:grid-cols-3.lg\:grid-cols-5 {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+
+    .max-w-xs {
+        max-width: 100% !important;
+        margin: 0 auto !important;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+    .grid-cols-1.sm\:grid-cols-2.md\:grid-cols-3.lg\:grid-cols-5 {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem !important;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .grid-cols-1.sm\:grid-cols-2.md\:grid-cols-3.lg\:grid-cols-5 {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 2rem !important;
+    }
+}
+
+@media (min-width: 1025px) {
+    .grid-cols-1.sm\:grid-cols-2.md\:grid-cols-3.lg\:grid-cols-5 {
+        grid-template-columns: repeat(5, 1fr) !important;
+        gap: 2rem !important;
+    }
+}
+
+/* Kartu komponen responsive */
+.komponen-card {
+    width: 100%;
+    max-width: 280px;
+    min-height: 400px;
+}
+
+@media (max-width: 480px) {
+    .komponen-card {
+        max-width: 100%;
+        margin: 0 auto 1.5rem auto;
+    }
+
+    .bg-gradient-to-br.from-blue-50.to-indigo-100 {
+        padding: 2rem 1rem !important;
     }
 }
