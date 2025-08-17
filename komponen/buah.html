@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Buah-buahan - 4 Sehat 5 Sempurna</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@5"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+    </head>
+    <body class="bg-gradient-to-b from-red-50 to-white">
+        <!-- Navigation Bar -->
+        <div class="navbar bg-red-600 text-white shadow-lg">
+            <div class="navbar-start">
+                <a
+                    href="../index.html"
+                    class="btn btn-ghost normal-case text-xl"
+                >
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Kembali
+                </a>
+            </div>
+            <div class="navbar-center">
+                <h1 class="text-xl font-bold">Buah-buahan</h1>
+            </div>
+            <div class="navbar-end">
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <ul
+                        tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                    >
+                        <li><a href="../index.html">Beranda</a></li>
+                        <li><a href="pokok.html">Makanan Pokok</a></li>
+                        <li><a href="sayur.html">Sayur Mayur</a></li>
+                        <li><a href="lauk.html">Lauk Pauk</a></li>
+                        <li><a href="susu.html">Minuman Susu</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <div
+            class="hero min-h-screen bg-gradient-to-br from-red-100 via-pink-50 to-white"
+        >
+            <div class="hero-content text-center max-w-4xl">
+                <div>
+                    <div class="mb-8">
+                        <div
+                            class="w-32 h-32 mx-auto mb-6 bg-red-200 rounded-full flex items-center justify-center"
+                        >
+                            <i
+                                class="fas fa-apple-alt text-6xl text-red-600"
+                            ></i>
+                        </div>
+                        <h1 class="text-5xl font-bold text-red-800 mb-6">
+                            Buah-buahan
+                        </h1>
+                        <p class="text-xl text-red-700 mb-8 leading-relaxed">
+                            Sumber vitamin C, antioksidan, dan serat alami yang
+                            penting untuk kesehatan tubuh dan sistem imun yang
+                            kuat.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Manfaat Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center text-red-800 mb-12">
+                    Manfaat Buah-buahan
+                </h2>
+
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
+                    <div
+                        class="bg-red-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="w-16 h-16 bg-red-200 rounded-full flex items-center justify-center mb-4"
+                        >
+                            <i
+                                class="fas fa-shield-alt text-2xl text-red-600"
+                            ></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-red-800 mb-3">
+                            Meningkatkan Imunitas
+                        </h3>
+                        <p class="text-red-700">
+                            Vitamin C dan antioksidan dalam buah membantu
+                            memperkuat sistem kekebalan tubuh melawan penyakit.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-red-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="w-16 h-16 bg-red-200 rounded-full flex items-center justify-center mb-4"
+                        >
+                            <i class="fas fa-heart text-2xl text-red-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-red-800 mb-3">
+                            Kesehatan Jantung
+                        </h3>
+                        <p class="text-red-700">
+                            Kalium dan antioksidan membantu menjaga kesehatan
+                            jantung dan mengatur tekanan darah.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-red-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="w-16 h-16 bg-red-200 rounded-full flex items-center justify-center mb-4"
+                        >
+                            <i
+                                class="fas fa-seedling text-2xl text-red-600"
+                            ></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-red-800 mb-3">
+                            Pencernaan Sehat
+                        </h3>
+                        <p class="text-red-700">
+                            Serat alami dalam buah membantu melancarkan
+                            pencernaan dan mencegah konstipasi.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-red-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="w-16 h-16 bg-red-200 rounded-full flex items-center justify-center mb-4"
+                        >
+                            <i class="fas fa-sun text-2xl text-red-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-red-800 mb-3">
+                            Kesehatan Kulit
+                        </h3>
+                        <p class="text-red-700">
+                            Vitamin C dan antioksidan membantu menjaga kulit
+                            tetap sehat dan mencegah penuaan dini.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-red-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="w-16 h-16 bg-red-200 rounded-full flex items-center justify-center mb-4"
+                        >
+                            <i
+                                class="fas fa-battery-full text-2xl text-red-600"
+                            ></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-red-800 mb-3">
+                            Sumber Energi Alami
+                        </h3>
+                        <p class="text-red-700">
+                            Gula alami dalam buah memberikan energi cepat yang
+                            sehat untuk aktivitas sehari-hari.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-red-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="w-16 h-16 bg-red-200 rounded-full flex items-center justify-center mb-4"
+                        >
+                            <i class="fas fa-brain text-2xl text-red-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-red-800 mb-3">
+                            Kesehatan Otak
+                        </h3>
+                        <p class="text-red-700">
+                            Antioksidan dan vitamin dalam buah mendukung fungsi
+                            otak dan meningkatkan daya ingat.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Jenis Buah Section -->
+        <section class="py-16 bg-red-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center text-red-800 mb-12">
+                    Jenis-Jenis Buah-buahan
+                </h2>
+
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+                >
+                    <div
+                        class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="h-48 bg-gradient-to-br from-orange-200 to-orange-300 flex items-center justify-center"
+                        >
+                            <i class="fas fa-sun text-6xl text-orange-600"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-red-800 mb-2">
+                                Buah Citrus
+                            </h3>
+                            <p class="text-red-700 text-sm mb-3">
+                                Jeruk, lemon, grapefruit, lime
+                            </p>
+                            <span
+                                class="text-xs bg-orange-100 text-orange-600 px-3 py-1 rounded-full"
+                                >Vitamin C Tinggi</span
+                            >
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="h-48 bg-gradient-to-br from-red-200 to-red-300 flex items-center justify-center"
+                        >
+                            <i
+                                class="fas fa-apple-alt text-6xl text-red-600"
+                            ></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-red-800 mb-2">
+                                Buah Berpori
+                            </h3>
+                            <p class="text-red-700 text-sm mb-3">
+                                Apel, pir, ceri, plum
+                            </p>
+                            <span
+                                class="text-xs bg-red-100 text-red-600 px-3 py-1 rounded-full"
+                                >Serat & Pektin</span
+                            >
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="h-48 bg-gradient-to-br from-purple-200 to-purple-300 flex items-center justify-center"
+                        >
+                            <i
+                                class="fas fa-grape-cluster text-6xl text-purple-600"
+                            ></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-red-800 mb-2">
+                                Berry
+                            </h3>
+                            <p class="text-red-700 text-sm mb-3">
+                                Strawberry, blueberry, raspberry
+                            </p>
+                            <span
+                                class="text-xs bg-purple-100 text-purple-600 px-3 py-1 rounded-full"
+                                >Antioksidan</span
+                            >
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="h-48 bg-gradient-to-br from-yellow-200 to-yellow-300 flex items-center justify-center"
+                        >
+                            <i
+                                class="fas fa-lemon text-6xl text-yellow-600"
+                            ></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-red-800 mb-2">
+                                Buah Tropis
+                            </h3>
+                            <p class="text-red-700 text-sm mb-3">
+                                Mangga, nanas, pisang, pepaya
+                            </p>
+                            <span
+                                class="text-xs bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full"
+                                >Enzim & Mineral</span
+                            >
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Buah Lokal Indonesia -->
+                <div class="mt-16">
+                    <h3
+                        class="text-3xl font-bold text-center text-red-800 mb-8"
+                    >
+                        Buah Khas Indonesia
+                    </h3>
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6"
+                    >
+                        <div
+                            class="bg-white rounded-xl shadow-md p-4 text-center hover:shadow-lg transition-shadow"
+                        >
+                            <div
+                                class="w-16 h-16 bg-green-200 rounded-full flex items-center justify-center mx-auto mb-3"
+                            >
+                                <i
+                                    class="fas fa-leaf text-2xl text-green-600"
+                                ></i>
+                            </div>
+                            <h4 class="font-semibold text-red-800">Durian</h4>
+                            <p class="text-xs text-red-600">Raja Buah</p>
+                        </div>
+
+                        <div
+                            class="bg-white rounded-xl shadow-md p-4 text-center hover:shadow-lg transition-shadow"
+                        >
+                            <div
+                                class="w-16 h-16 bg-purple-200 rounded-full flex items-center justify-center mx-auto mb-3"
+                            >
+                                <i
+                                    class="fas fa-circle text-2xl text-purple-600"
+                                ></i>
+                            </div>
+                            <h4 class="font-semibold text-red-800">Manggis</h4>
+                            <p class="text-xs text-red-600">Ratu Buah</p>
+                        </div>
+
+                        <div
+                            class="bg-white rounded-xl shadow-md p-4 text-center hover:shadow-lg transition-shadow"
+                        >
+                            <div
+                                class="w-16 h-16 bg-red-200 rounded-full flex items-center justify-center mx-auto mb-3"
+                            >
+                                <i
+                                    class="fas fa-heart text-2xl text-red-600"
+                                ></i>
+                            </div>
+                            <h4 class="font-semibold text-red-800">Rambutan</h4>
+                            <p class="text-xs text-red-600">Vitamin C</p>
+                        </div>
+
+                        <div
+                            class="bg-white rounded-xl shadow-md p-4 text-center hover:shadow-lg transition-shadow"
+                        >
+                            <div
+                                class="w-16 h-16 bg-brown-200 rounded-full flex items-center justify-center mx-auto mb-3"
+                            >
+                                <i
+                                    class="fas fa-seedling text-2xl text-amber-600"
+                                ></i>
+                            </div>
+                            <h4 class="font-semibold text-red-800">Salak</h4>
+                            <p class="text-xs text-red-600">Potasium</p>
+                        </div>
+
+                        <div
+                            class="bg-white rounded-xl shadow-md p-4 text-center hover:shadow-lg transition-shadow"
+                        >
+                            <div
+                                class="w-16 h-16 bg-orange-200 rounded-full flex items-center justify-center mx-auto mb-3"
+                            >
+                                <i
+                                    class="fas fa-star text-2xl text-orange-600"
+                                ></i>
+                            </div>
+                            <h4 class="font-semibold text-red-800">
+                                Belimbing
+                            </h4>
+                            <p class="text-xs text-red-600">Vitamin A</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center text-red-800 mb-12">
+                    Tips Mengonsumsi Buah-buahan
+                </h2>
+
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+                >
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-12 h-12 bg-red-200 rounded-full flex items-center justify-center flex-shrink-0"
+                        >
+                            <span class="text-red-600 font-bold">1</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-red-800 mb-2">
+                                Konsumsi Segar
+                            </h3>
+                            <p class="text-red-700">
+                                Pilih buah segar daripada jus atau buah kalengan
+                                untuk mendapat manfaat serat yang optimal.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-12 h-12 bg-red-200 rounded-full flex items-center justify-center flex-shrink-0"
+                        >
+                            <span class="text-red-600 font-bold">2</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-red-800 mb-2">
+                                Waktu yang Tepat
+                            </h3>
+                            <p class="text-red-700">
+                                Konsumsi buah di pagi hari atau sebagai snack
+                                sehat di antara waktu makan utama.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-12 h-12 bg-red-200 rounded-full flex items-center justify-center flex-shrink-0"
+                        >
+                            <span class="text-red-600 font-bold">3</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-red-800 mb-2">
+                                Variasi Warna
+                            </h3>
+                            <p class="text-red-700">
+                                Konsumsi buah dengan berbagai warna untuk
+                                mendapat spektrum nutrisi yang lengkap.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-12 h-12 bg-red-200 rounded-full flex items-center justify-center flex-shrink-0"
+                        >
+                            <span class="text-red-600 font-bold">4</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-red-800 mb-2">
+                                Porsi Ideal
+                            </h3>
+                            <p class="text-red-700">
+                                Target 2-4 porsi buah per hari, atau sekitar
+                                400-600 gram untuk orang dewasa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-red-800 text-white py-8">
+            <div class="container mx-auto px-4 text-center">
+                <div class="mb-4">
+                    <h3 class="text-2xl font-bold mb-2">4 Sehat 5 Sempurna</h3>
+                    <p class="text-red-200">
+                        Panduan Hidup Sehat untuk Indonesia
+                    </p>
+                </div>
+                <div class="flex justify-center space-x-6 mb-4">
+                    <a
+                        href="../index.html"
+                        class="hover:text-red-300 transition-colors"
+                        >Beranda</a
+                    >
+                    <a
+                        href="pokok.html"
+                        class="hover:text-red-300 transition-colors"
+                        >Makanan Pokok</a
+                    >
+                    <a
+                        href="sayur.html"
+                        class="hover:text-red-300 transition-colors"
+                        >Sayur Mayur</a
+                    >
+                    <a
+                        href="lauk.html"
+                        class="hover:text-red-300 transition-colors"
+                        >Lauk Pauk</a
+                    >
+                    <a
+                        href="susu.html"
+                        class="hover:text-red-300 transition-colors"
+                        >Minuman Susu</a
+                    >
+                </div>
+                <p class="text-red-300 text-sm">
+                    © 2024 4 Sehat 5 Sempurna. All rights reserved.
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

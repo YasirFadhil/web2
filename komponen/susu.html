@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Minuman Susu - 4 Sehat 5 Sempurna</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@5"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+    </head>
+    <body class="bg-gradient-to-b from-blue-50 to-white">
+        <!-- Navigation Bar -->
+        <div class="navbar bg-blue-600 text-white shadow-lg">
+            <div class="navbar-start">
+                <a
+                    href="../index.html"
+                    class="btn btn-ghost normal-case text-xl"
+                >
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Kembali
+                </a>
+            </div>
+            <div class="navbar-center">
+                <h1 class="text-xl font-bold">Minuman Susu</h1>
+            </div>
+            <div class="navbar-end">
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <ul
+                        tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                    >
+                        <li><a href="../index.html">Beranda</a></li>
+                        <li><a href="pokok.html">Makanan Pokok</a></li>
+                        <li><a href="sayur.html">Sayur Mayur</a></li>
+                        <li><a href="lauk.html">Lauk Pauk</a></li>
+                        <li><a href="buah.html">Buah-buahan</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <div
+            class="hero min-h-screen bg-gradient-to-br from-blue-100 via-blue-50 to-white"
+        >
+            <div class="hero-content text-center max-w-4xl">
+                <div>
+                    <div class="mb-8">
+                        <div
+                            class="w-32 h-32 mx-auto mb-6 bg-blue-200 rounded-full flex items-center justify-center"
+                        >
+                            <i
+                                class="fas fa-glass-whiskey text-6xl text-blue-600"
+                            ></i>
+                        </div>
+                        <h1 class="text-5xl font-bold text-blue-800 mb-6">
+                            Minuman Susu
+                        </h1>
+                        <p class="text-xl text-blue-700 mb-8 leading-relaxed">
+                            Sumber kalsium, protein, dan vitamin D yang penting
+                            untuk kesehatan tulang, gigi, dan pertumbuhan yang
+                            optimal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Manfaat Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center text-blue-800 mb-12">
+                    Manfaat Minuman Susu
+                </h2>
+
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
+                    <div
+                        class="bg-blue-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="w-16 h-16 bg-blue-200 rounded-full flex items-center justify-center mb-4"
+                        >
+                            <i class="fas fa-bone text-2xl text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-blue-800 mb-3">
+                            Memperkuat Tulang
+                        </h3>
+                        <p class="text-blue-700">
+                            Kalsium dan fosfor dalam susu membantu pembentukan
+                            dan pemeliharaan tulang yang kuat sepanjang hidup.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-blue-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="w-16 h-16 bg-blue-200 rounded-full flex items-center justify-center mb-4"
+                        >
+                            <i class="fas fa-tooth text-2xl text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-blue-800 mb-3">
+                            Kesehatan Gigi
+                        </h3>
+                        <p class="text-blue-700">
+                            Kalsium dan fosfor mencegah kerusakan gigi dan
+                            memperkuat enamel gigi untuk perlindungan optimal.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-blue-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="w-16 h-16 bg-blue-200 rounded-full flex items-center justify-center mb-4"
+                        >
+                            <i class="fas fa-child text-2xl text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-blue-800 mb-3">
+                            Mendukung Pertumbuhan
+                        </h3>
+                        <p class="text-blue-700">
+                            Protein berkualitas tinggi dan kalsium penting untuk
+                            pertumbuhan optimal anak dan remaja.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-blue-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="w-16 h-16 bg-blue-200 rounded-full flex items-center justify-center mb-4"
+                        >
+                            <i
+                                class="fas fa-dumbbell text-2xl text-blue-600"
+                            ></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-blue-800 mb-3">
+                            Pembentukan Otot
+                        </h3>
+                        <p class="text-blue-700">
+                            Protein kasein dan whey membantu pembentukan dan
+                            pemulihan otot, terutama setelah olahraga.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-blue-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="w-16 h-16 bg-blue-200 rounded-full flex items-center justify-center mb-4"
+                        >
+                            <i class="fas fa-moon text-2xl text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-blue-800 mb-3">
+                            Kualitas Tidur
+                        </h3>
+                        <p class="text-blue-700">
+                            Triptofan dalam susu membantu produksi serotonin
+                            yang mendukung tidur yang berkualitas.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-blue-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="w-16 h-16 bg-blue-200 rounded-full flex items-center justify-center mb-4"
+                        >
+                            <i
+                                class="fas fa-heartbeat text-2xl text-blue-600"
+                            ></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-blue-800 mb-3">
+                            Kesehatan Jantung
+                        </h3>
+                        <p class="text-blue-700">
+                            Kalium membantu mengatur tekanan darah dan mendukung
+                            kesehatan jantung secara keseluruhan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Jenis Susu Section -->
+        <section class="py-16 bg-blue-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center text-blue-800 mb-12">
+                    Jenis-Jenis Minuman Susu
+                </h2>
+
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
+                    <div
+                        class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="h-48 bg-gradient-to-br from-blue-200 to-blue-300 flex items-center justify-center"
+                        >
+                            <i
+                                class="fas fa-glass-whiskey text-6xl text-blue-600"
+                            ></i>
+                        </div>
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-blue-800 mb-2"
+                            >
+                                Susu Segar
+                            </h3>
+                            <p class="text-blue-700 text-sm mb-3">
+                                Susu sapi murni tanpa pengolahan tambahan
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full"
+                                    >Kalsium Tinggi</span
+                                >
+                                <span
+                                    class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full"
+                                    >Protein Lengkap</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="h-48 bg-gradient-to-br from-yellow-200 to-yellow-300 flex items-center justify-center"
+                        >
+                            <i
+                                class="fas fa-cookie-bite text-6xl text-yellow-600"
+                            ></i>
+                        </div>
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-blue-800 mb-2"
+                            >
+                                Susu Formula
+                            </h3>
+                            <p class="text-blue-700 text-sm mb-3">
+                                Susu bubuk dengan tambahan vitamin dan mineral
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-xs bg-yellow-100 text-yellow-600 px-2 py-1 rounded-full"
+                                    >Vitamin D</span
+                                >
+                                <span
+                                    class="text-xs bg-orange-100 text-orange-600 px-2 py-1 rounded-full"
+                                    >Omega-3</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="h-48 bg-gradient-to-br from-purple-200 to-purple-300 flex items-center justify-center"
+                        >
+                            <i
+                                class="fas fa-ice-cream text-6xl text-purple-600"
+                            ></i>
+                        </div>
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-blue-800 mb-2"
+                            >
+                                Yogurt
+                            </h3>
+                            <p class="text-blue-700 text-sm mb-3">
+                                Susu fermentasi dengan bakteri baik
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-xs bg-purple-100 text-purple-600 px-2 py-1 rounded-full"
+                                    >Probiotik</span
+                                >
+                                <span
+                                    class="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full"
+                                    >Pencernaan</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="h-48 bg-gradient-to-br from-green-200 to-green-300 flex items-center justify-center"
+                        >
+                            <i
+                                class="fas fa-seedling text-6xl text-green-600"
+                            ></i>
+                        </div>
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-blue-800 mb-2"
+                            >
+                                Susu Nabati
+                            </h3>
+                            <p class="text-blue-700 text-sm mb-3">
+                                Susu kedelai, almond, oat untuk yang intoleran
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-xs bg-green-100 text-green-600 px-2 py-1 rounded-full"
+                                    >Laktosa Free</span
+                                >
+                                <span
+                                    class="text-xs bg-brown-100 text-amber-600 px-2 py-1 rounded-full"
+                                    >Serat</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="h-48 bg-gradient-to-br from-pink-200 to-pink-300 flex items-center justify-center"
+                        >
+                            <i class="fas fa-heart text-6xl text-pink-600"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-blue-800 mb-2"
+                            >
+                                Susu Rendah Lemak
+                            </h3>
+                            <p class="text-blue-700 text-sm mb-3">
+                                Susu dengan kandungan lemak yang dikurangi
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-xs bg-pink-100 text-pink-600 px-2 py-1 rounded-full"
+                                    >Low Fat</span
+                                >
+                                <span
+                                    class="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full"
+                                    >Diet Sehat</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="h-48 bg-gradient-to-br from-orange-200 to-orange-300 flex items-center justify-center"
+                        >
+                            <i
+                                class="fas fa-cheese text-6xl text-orange-600"
+                            ></i>
+                        </div>
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-blue-800 mb-2"
+                            >
+                                Produk Olahan
+                            </h3>
+                            <p class="text-blue-700 text-sm mb-3">
+                                Keju, mentega, kefir, dan produk susu lainnya
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-xs bg-orange-100 text-orange-600 px-2 py-1 rounded-full"
+                                    >Kalsium</span
+                                >
+                                <span
+                                    class="text-xs bg-yellow-100 text-yellow-600 px-2 py-1 rounded-full"
+                                    >Vitamin B12</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center text-blue-800 mb-12">
+                    Tips Mengonsumsi Susu
+                </h2>
+
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+                >
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-12 h-12 bg-blue-200 rounded-full flex items-center justify-center flex-shrink-0"
+                        >
+                            <span class="text-blue-600 font-bold">1</span>
+                        </div>
+                        <div>
+                            <h3
+                                class="text-xl font-semibold text-blue-800 mb-2"
+                            >
+                                Pilih yang Tepat
+                            </h3>
+                            <p class="text-blue-700">
+                                Sesuaikan jenis susu dengan kebutuhan dan
+                                kondisi tubuh, seperti intoleransi laktosa atau
+                                diet khusus.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-12 h-12 bg-blue-200 rounded-full flex items-center justify-center flex-shrink-0"
+                        >
+                            <span class="text-blue-600 font-bold">2</span>
+                        </div>
+                        <div>
+                            <h3
+                                class="text-xl font-semibold text-blue-800 mb-2"
+                            >
+                                Waktu Konsumsi
+                            </h3>
+                            <p class="text-blue-700">
+                                Minum susu di pagi hari untuk energi atau malam
+                                hari untuk membantu tidur yang berkualitas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-12 h-12 bg-blue-200 rounded-full flex items-center justify-center flex-shrink-0"
+                        >
+                            <span class="text-blue-600 font-bold">3</span>
+                        </div>
+                        <div>
+                            <h3
+                                class="text-xl font-semibold text-blue-800 mb-2"
+                            >
+                                Porsi yang Tepat
+                            </h3>
+                            <p class="text-blue-700">
+                                Konsumsi 2-3 gelas susu per hari untuk memenuhi
+                                kebutuhan kalsium dan protein harian.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-12 h-12 bg-blue-200 rounded-full flex items-center justify-center flex-shrink-0"
+                        >
+                            <span class="text-blue-600 font-bold">4</span>
+                        </div>
+                        <div>
+                            <h3
+                                class="text-xl font-semibold text-blue-800 mb-2"
+                            >
+                                Kombinasi Sehat
+                            </h3>
+                            <p class="text-blue-700">
+                                Kombinasikan dengan makanan bergizi lain seperti
+                                sereal, buah, atau kacang-kacangan.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-12 h-12 bg-blue-200 rounded-full flex items-center justify-center flex-shrink-0"
+                        >
+                            <span class="text-blue-600 font-bold">5</span>
+                        </div>
+                        <div>
+                            <h3
+                                class="text-xl font-semibold text-blue-800 mb-2"
+                            >
+                                Penyimpanan yang Benar
+                            </h3>
+                            <p class="text-blue-700">
+                                Simpan susu di lemari es dan konsumsi sebelum
+                                tanggal kedaluwarsa untuk menjaga kualitas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-12 h-12 bg-blue-200 rounded-full flex items-center justify-center flex-shrink-0"
+                        >
+                            <span class="text-blue-600 font-bold">6</span>
+                        </div>
+                        <div>
+                            <h3
+                                class="text-xl font-semibold text-blue-800 mb-2"
+                            >
+                                Perhatikan Reaksi Tubuh
+                            </h3>
+                            <p class="text-blue-700">
+                                Hentikan konsumsi jika ada gejala intoleransi
+                                dan konsultasi dengan ahli gizi atau dokter.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-blue-800 text-white py-8">
+            <div class="container mx-auto px-4 text-center">
+                <div class="mb-4">
+                    <h3 class="text-2xl font-bold mb-2">4 Sehat 5 Sempurna</h3>
+                    <p class="text-blue-200">
+                        Panduan Hidup Sehat untuk Indonesia
+                    </p>
+                </div>
+                <div class="flex justify-center space-x-6 mb-4">
+                    <a
+                        href="../index.html"
+                        class="hover:text-blue-300 transition-colors"
+                        >Beranda</a
+                    >
+                    <a
+                        href="pokok.html"
+                        class="hover:text-blue-300 transition-colors"
+                        >Makanan Pokok</a
+                    >
+                    <a
+                        href="sayur.html"
+                        class="hover:text-blue-300 transition-colors"
+                        >Sayur Mayur</a
+                    >
+                    <a
+                        href="lauk.html"
+                        class="hover:text-blue-300 transition-colors"
+                        >Lauk Pauk</a
+                    >
+                    <a
+                        href="buah.html"
+                        class="hover:text-blue-300 transition-colors"
+                        >Buah-buahan</a
+                    >
+                </div>
+                <p class="text-blue-300 text-sm">
+                    © 2024 4 Sehat 5 Sempurna. All rights reserved.
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

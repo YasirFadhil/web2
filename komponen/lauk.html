@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lauk Pauk - 4 Sehat 5 Sempurna</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@5"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+    </head>
+    <body class="bg-gradient-to-b from-orange-50 to-white">
+        <!-- Navigation Bar -->
+        <div class="navbar bg-orange-600 text-white shadow-lg">
+            <div class="navbar-start">
+                <a
+                    href="../index.html"
+                    class="btn btn-ghost normal-case text-xl"
+                >
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Kembali
+                </a>
+            </div>
+            <div class="navbar-center">
+                <h1 class="text-xl font-bold">Lauk Pauk</h1>
+            </div>
+            <div class="navbar-end">
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <ul
+                        tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                    >
+                        <li><a href="../index.html">Beranda</a></li>
+                        <li><a href="pokok.html">Makanan Pokok</a></li>
+                        <li><a href="sayur.html">Sayur Mayur</a></li>
+                        <li><a href="buah.html">Buah-buahan</a></li>
+                        <li><a href="susu.html">Minuman Susu</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <div
+            class="hero min-h-screen bg-gradient-to-br from-orange-100 via-orange-50 to-white"
+        >
+            <div class="hero-content text-center max-w-4xl">
+                <div>
+                    <div class="mb-8">
+                        <div
+                            class="w-32 h-32 mx-auto mb-6 bg-orange-200 rounded-full flex items-center justify-center"
+                        >
+                            <i
+                                class="fas fa-drumstick-bite text-6xl text-orange-600"
+                            ></i>
+                        </div>
+                        <h1 class="text-5xl font-bold text-orange-800 mb-6">
+                            Lauk Pauk
+                        </h1>
+                        <p class="text-xl text-orange-700 mb-8 leading-relaxed">
+                            Sumber protein hewani dan nabati yang penting untuk
+                            pertumbuhan, perbaikan sel, dan pembentukan otot.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Manfaat Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2
+                    class="text-4xl font-bold text-center text-orange-800 mb-12"
+                >
+                    Manfaat Lauk Pauk
+                </h2>
+
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
+                    <div
+                        class="bg-orange-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="w-16 h-16 bg-orange-200 rounded-full flex items-center justify-center mb-4"
+                        >
+                            <i
+                                class="fas fa-dumbbell text-2xl text-orange-600"
+                            ></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-orange-800 mb-3">
+                            Membangun Otot
+                        </h3>
+                        <p class="text-orange-700">
+                            Protein dalam lauk pauk membantu pembentukan dan
+                            perbaikan jaringan otot.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-orange-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="w-16 h-16 bg-orange-200 rounded-full flex items-center justify-center mb-4"
+                        >
+                            <i
+                                class="fas fa-child text-2xl text-orange-600"
+                            ></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-orange-800 mb-3">
+                            Mendukung Pertumbuhan
+                        </h3>
+                        <p class="text-orange-700">
+                            Protein berkualitas tinggi penting untuk pertumbuhan
+                            dan perkembangan anak.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-orange-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="w-16 h-16 bg-orange-200 rounded-full flex items-center justify-center mb-4"
+                        >
+                            <i
+                                class="fas fa-shield-virus text-2xl text-orange-600"
+                            ></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-orange-800 mb-3">
+                            Meningkatkan Imunitas
+                        </h3>
+                        <p class="text-orange-700">
+                            Antibodi dan enzim yang dibuat dari protein membantu
+                            melawan infeksi.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-orange-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="w-16 h-16 bg-orange-200 rounded-full flex items-center justify-center mb-4"
+                        >
+                            <i
+                                class="fas fa-battery-full text-2xl text-orange-600"
+                            ></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-orange-800 mb-3">
+                            Sumber Energi
+                        </h3>
+                        <p class="text-orange-700">
+                            Protein dapat diubah menjadi energi ketika
+                            karbohidrat tidak mencukupi.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-orange-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="w-16 h-16 bg-orange-200 rounded-full flex items-center justify-center mb-4"
+                        >
+                            <i
+                                class="fas fa-heartbeat text-2xl text-orange-600"
+                            ></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-orange-800 mb-3">
+                            Kesehatan Jantung
+                        </h3>
+                        <p class="text-orange-700">
+                            Protein berkualitas membantu menjaga kesehatan
+                            jantung dan pembuluh darah.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-orange-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="w-16 h-16 bg-orange-200 rounded-full flex items-center justify-center mb-4"
+                        >
+                            <i
+                                class="fas fa-brain text-2xl text-orange-600"
+                            ></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-orange-800 mb-3">
+                            Fungsi Otak
+                        </h3>
+                        <p class="text-orange-700">
+                            Asam amino dari protein mendukung produksi
+                            neurotransmitter untuk fungsi otak optimal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Jenis Lauk Section -->
+        <section class="py-16 bg-orange-50">
+            <div class="container mx-auto px-4">
+                <h2
+                    class="text-4xl font-bold text-center text-orange-800 mb-12"
+                >
+                    Jenis-Jenis Lauk Pauk
+                </h2>
+
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
+                    <div
+                        class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="h-48 bg-gradient-to-br from-red-200 to-red-300 flex items-center justify-center"
+                        >
+                            <i
+                                class="fas fa-drumstick-bite text-6xl text-red-600"
+                            ></i>
+                        </div>
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-orange-800 mb-2"
+                            >
+                                Daging Merah
+                            </h3>
+                            <p class="text-orange-700 text-sm mb-3">
+                                Daging sapi, kambing, domba
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-full"
+                                    >Zat Besi</span
+                                >
+                                <span
+                                    class="text-xs bg-orange-100 text-orange-600 px-2 py-1 rounded-full"
+                                    >Vitamin B12</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="h-48 bg-gradient-to-br from-yellow-200 to-yellow-300 flex items-center justify-center"
+                        >
+                            <i class="fas fa-egg text-6xl text-yellow-600"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-orange-800 mb-2"
+                            >
+                                Unggas & Telur
+                            </h3>
+                            <p class="text-orange-700 text-sm mb-3">
+                                Ayam, bebek, telur ayam/bebek
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-xs bg-yellow-100 text-yellow-600 px-2 py-1 rounded-full"
+                                    >Protein Lengkap</span
+                                >
+                                <span
+                                    class="text-xs bg-orange-100 text-orange-600 px-2 py-1 rounded-full"
+                                    >Selenium</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="h-48 bg-gradient-to-br from-blue-200 to-blue-300 flex items-center justify-center"
+                        >
+                            <i class="fas fa-fish text-6xl text-blue-600"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-orange-800 mb-2"
+                            >
+                                Ikan & Seafood
+                            </h3>
+                            <p class="text-orange-700 text-sm mb-3">
+                                Ikan laut, ikan air tawar, udang
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full"
+                                    >Omega-3</span
+                                >
+                                <span
+                                    class="text-xs bg-orange-100 text-orange-600 px-2 py-1 rounded-full"
+                                    >Iodium</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="h-48 bg-gradient-to-br from-green-200 to-green-300 flex items-center justify-center"
+                        >
+                            <i
+                                class="fas fa-seedling text-6xl text-green-600"
+                            ></i>
+                        </div>
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-orange-800 mb-2"
+                            >
+                                Protein Nabati
+                            </h3>
+                            <p class="text-orange-700 text-sm mb-3">
+                                Tahu, tempe, kacang-kacangan
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-xs bg-green-100 text-green-600 px-2 py-1 rounded-full"
+                                    >Serat</span
+                                >
+                                <span
+                                    class="text-xs bg-orange-100 text-orange-600 px-2 py-1 rounded-full"
+                                    >Isoflavon</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="h-48 bg-gradient-to-br from-purple-200 to-purple-300 flex items-center justify-center"
+                        >
+                            <i
+                                class="fas fa-cheese text-6xl text-purple-600"
+                            ></i>
+                        </div>
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-orange-800 mb-2"
+                            >
+                                Produk Susu
+                            </h3>
+                            <p class="text-orange-700 text-sm mb-3">
+                                Keju, yogurt, susu
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-xs bg-purple-100 text-purple-600 px-2 py-1 rounded-full"
+                                    >Kalsium</span
+                                >
+                                <span
+                                    class="text-xs bg-orange-100 text-orange-600 px-2 py-1 rounded-full"
+                                    >Probiotik</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="h-48 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center"
+                        >
+                            <i class="fas fa-bacon text-6xl text-gray-600"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-orange-800 mb-2"
+                            >
+                                Daging Olahan
+                            </h3>
+                            <p class="text-orange-700 text-sm mb-3">
+                                Sosis, kornet, daging asap
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full"
+                                    >Batasi Konsumsi</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2
+                    class="text-4xl font-bold text-center text-orange-800 mb-12"
+                >
+                    Tips Mengonsumsi Lauk Pauk
+                </h2>
+
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+                >
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-12 h-12 bg-orange-200 rounded-full flex items-center justify-center flex-shrink-0"
+                        >
+                            <span class="text-orange-600 font-bold">1</span>
+                        </div>
+                        <div>
+                            <h3
+                                class="text-xl font-semibold text-orange-800 mb-2"
+                            >
+                                Variasi Sumber Protein
+                            </h3>
+                            <p class="text-orange-700">
+                                Kombinasikan protein hewani dan nabati untuk
+                                mendapat asam amino yang lengkap.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-12 h-12 bg-orange-200 rounded-full flex items-center justify-center flex-shrink-0"
+                        >
+                            <span class="text-orange-600 font-bold">2</span>
+                        </div>
+                        <div>
+                            <h3
+                                class="text-xl font-semibold text-orange-800 mb-2"
+                            >
+                                Metode Masak Sehat
+                            </h3>
+                            <p class="text-orange-700">
+                                Pilih metode panggang, rebus, atau kukus
+                                daripada menggoreng untuk mengurangi lemak
+                                jenuh.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-12 h-12 bg-orange-200 rounded-full flex items-center justify-center flex-shrink-0"
+                        >
+                            <span class="text-orange-600 font-bold">3</span>
+                        </div>
+                        <div>
+                            <h3
+                                class="text-xl font-semibold text-orange-800 mb-2"
+                            >
+                                Porsi yang Tepat
+                            </h3>
+                            <p class="text-orange-700">
+                                Konsumsi 2-3 porsi protein per hari, sesuai
+                                dengan kebutuhan tubuh dan aktivitas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-12 h-12 bg-orange-200 rounded-full flex items-center justify-center flex-shrink-0"
+                        >
+                            <span class="text-orange-600 font-bold">4</span>
+                        </div>
+                        <div>
+                            <h3
+                                class="text-xl font-semibold text-orange-800 mb-2"
+                            >
+                                Freshness Matters
+                            </h3>
+                            <p class="text-orange-700">
+                                Pilih lauk pauk yang segar dan simpan dengan
+                                cara yang tepat untuk menjaga kualitas protein.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-orange-800 text-white py-8">
+            <div class="container mx-auto px-4 text-center">
+                <div class="mb-4">
+                    <h3 class="text-2xl font-bold mb-2">4 Sehat 5 Sempurna</h3>
+                    <p class="text-orange-200">
+                        Panduan Hidup Sehat untuk Indonesia
+                    </p>
+                </div>
+                <div class="flex justify-center space-x-6 mb-4">
+                    <a
+                        href="../index.html"
+                        class="hover:text-orange-300 transition-colors"
+                        >Beranda</a
+                    >
+                    <a
+                        href="pokok.html"
+                        class="hover:text-orange-300 transition-colors"
+                        >Makanan Pokok</a
+                    >
+                    <a
+                        href="sayur.html"
+                        class="hover:text-orange-300 transition-colors"
+                        >Sayur Mayur</a
+                    >
+                    <a
+                        href="buah.html"
+                        class="hover:text-orange-300 transition-colors"
+                        >Buah-buahan</a
+                    >
+                    <a
+                        href="susu.html"
+                        class="hover:text-orange-300 transition-colors"
+                        >Minuman Susu</a
+                    >
+                </div>
+                <p class="text-orange-300 text-sm">
+                    © 2024 4 Sehat 5 Sempurna. All rights reserved.
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

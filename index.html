@@ -293,8 +293,240 @@
                         untuk menjaga kesehatan.
                     </p>
                 </div>
+                <!-- Awal dari segmen komponen -->
+                <div class="w-full py-12">
+                    <!-- Judul Utama -->
+                    <h1
+                        class="text-4xl font-bold text-center text-gray-800 mb-12 px-4"
+                    >
+                        Komponen
+                    </h1>
+
+                    <!--
+                      Kontainer untuk semua kartu.
+                      - `flex`: Mengaktifkan flexbox.
+                      - `overflow-x-auto`: Membuat kontainer bisa di-scroll horizontal jika kontennya melebihi lebar.
+                      - `pb-6`: Menambahkan padding bawah untuk memberi ruang pada scrollbar.
+                      - `gap-6`: Memberi jarak antar kartu.
+                    -->
+                    <div
+                        class="flex flex-wrap justify-center gap-4 md:gap-6 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto"
+                    >
+                        <!--
+                          Kartu Makanan Pokok
+                          - `flex-shrink-0`: Mencegah kartu menjadi "gepeng" atau menyusut saat layar sempit.
+                        -->
+                        <div
+                            class="bg-white border border-gray-200 rounded-2xl shadow-lg flex flex-col text-center overflow-hidden transform hover:scale-105 transition-transform duration-300 flex-1 min-w-[150px] max-w-[250px] aspect-[3/4]"
+                        >
+                            <!-- Area Gambar -->
+                            <div class="w-full flex-1 bg-gray-200">
+                                <img
+                                    src="https://placehold.co/600x400/f1f5f9/334155?text=Nasi"
+                                    alt="Gambar Makanan Pokok"
+                                    class="w-full h-full object-cover"
+                                />
+                            </div>
+                            <!-- Area Konten -->
+                            <div
+                                class="p-4 flex-grow flex flex-col justify-between"
+                            >
+                                <h2
+                                    class="text-xl font-semibold text-gray-700 mb-4"
+                                >
+                                    Makanan Pokok
+                                </h2>
+                                <button
+                                    onclick="window.location.href='komponen/pokok.html'"
+                                    class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold p-3 rounded-lg w-16 mx-auto transition duration-200"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="2.5"
+                                        stroke="currentColor"
+                                        class="w-6 h-6 mx-auto"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- 2. Kartu Sayuran -->
+                        <div
+                            class="bg-white border border-gray-200 rounded-2xl shadow-lg flex flex-col text-center overflow-hidden transform hover:scale-105 transition-transform duration-300 flex-1 min-w-[150px] max-w-[250px] aspect-[3/4]"
+                        >
+                            <div class="w-full flex-1 bg-gray-200">
+                                <img
+                                    src="https://placehold.co/600x400/ecfccb/4d7c0f?text=Sayuran"
+                                    alt="Gambar Sayuran"
+                                    class="w-full h-full object-cover"
+                                />
+                            </div>
+                            <div
+                                class="p-4 flex-grow flex flex-col justify-between"
+                            >
+                                <h2
+                                    class="text-xl font-semibold text-gray-700 mb-4"
+                                >
+                                    Sayuran
+                                </h2>
+                                <button
+                                    onclick="window.location.href='komponen/sayur.html'"
+                                    class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold p-3 rounded-lg w-16 mx-auto transition duration-200"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="2.5"
+                                        stroke="currentColor"
+                                        class="w-6 h-6 mx-auto"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- 3. Kartu Lauk -->
+                        <div
+                            class="bg-white border border-gray-200 rounded-2xl shadow-lg flex flex-col text-center overflow-hidden transform hover:scale-105 transition-transform duration-300 flex-1 min-w-[150px] max-w-[250px] aspect-[3/4]"
+                        >
+                            <div class="w-full flex-1 bg-gray-200">
+                                <img
+                                    src="https://placehold.co/600x400/ffedd5/9a3412?text=Ayam+Goreng"
+                                    alt="Gambar Lauk"
+                                    class="w-full h-full object-cover"
+                                />
+                            </div>
+                            <div
+                                class="p-4 flex-grow flex flex-col justify-between"
+                            >
+                                <h2
+                                    class="text-xl font-semibold text-gray-700 mb-4"
+                                >
+                                    Lauk
+                                </h2>
+                                <button
+                                    onclick="window.location.href='komponen/lauk.html'"
+                                    class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold p-3 rounded-lg w-16 mx-auto transition duration-200"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="2.5"
+                                        stroke="currentColor"
+                                        class="w-6 h-6 mx-auto"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- 4. Kartu Buah -->
+                        <div
+                            class="bg-white border border-gray-200 rounded-2xl shadow-lg flex flex-col text-center overflow-hidden transform hover:scale-105 transition-transform duration-300 flex-1 min-w-[150px] max-w-[250px] aspect-[3/4]"
+                        >
+                            <div class="w-full flex-1 bg-gray-200">
+                                <img
+                                    src="https://placehold.co/600x400/fef2f2/be123c?text=Aneka+Buah"
+                                    alt="Gambar Buah"
+                                    class="w-full h-full object-cover"
+                                />
+                            </div>
+                            <div
+                                class="p-4 flex-grow flex flex-col justify-between"
+                            >
+                                <h2
+                                    class="text-xl font-semibold text-gray-700 mb-4"
+                                >
+                                    Buah
+                                </h2>
+                                <button
+                                    onclick="window.location.href='komponen/buah.html'"
+                                    class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold p-3 rounded-lg w-16 mx-auto transition duration-200"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="2.5"
+                                        stroke="currentColor"
+                                        class="w-6 h-6 mx-auto"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- 5. Kartu Susu -->
+                        <div
+                            class="bg-white border border-gray-200 rounded-2xl shadow-lg flex flex-col text-center overflow-hidden transform hover:scale-105 transition-transform duration-300 flex-1 min-w-[150px] max-w-[250px] aspect-[3/4]"
+                        >
+                            <div class="w-full flex-1 bg-gray-200">
+                                <img
+                                    src="https://placehold.co/600x400/eff6ff/1d4ed8?text=Susu"
+                                    alt="Gambar Susu"
+                                    class="w-full h-full object-cover"
+                                />
+                            </div>
+                            <div
+                                class="p-4 flex-grow flex flex-col justify-between"
+                            >
+                                <h2
+                                    class="text-xl font-semibold text-gray-700 mb-4"
+                                >
+                                    Susu
+                                </h2>
+                                <button
+                                    onclick="window.location.href='komponen/susu.html'"
+                                    class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold p-3 rounded-lg w-16 mx-auto transition duration-200"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="2.5"
+                                        stroke="currentColor"
+                                        class="w-6 h-6 mx-auto"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Akhir dari segmen komponen -->
+
                 <!-- Komponen Section -->
-                <h1 id="komponen">Komponen</h1>
+                <!-- <h1 id="komponen">Komponen</h1>
                 <p>
                     Konsep 4 Sehat 5 Sempurna terdiri dari lima komponen utama
                     yang harus dipenuhi dalam kehidupan sehari-hari:
@@ -320,7 +552,7 @@
                         <a href="komponen/susu.html">Minuman Susu</a> - Sumber
                         kalsium dan protein tambahan
                     </li>
-                </ol>
+                </ol> -->
 
                 <!-- Manfaat Section -->
                 <h1 id="manfaat">Manfaat</h1>
