@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Pokok</title>
+        <title>Makanan Pokok - 4 Sehat 5 Sempurna</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -25,50 +25,583 @@
             rel="stylesheet"
             type="text/css"
         />
-        <script src="scripts.js"></script>
     </head>
-    <body>
-        <div class="navbar bg-base-100">
-            <div class="flex-1">
-                <a class="btn btn-ghost normal-case text-xl">Pokok</a>
+    <body class="bg-gradient-to-b from-gray-50 to-white">
+        <!-- Navigation Bar -->
+        <div class="navbar bg-gray-700 text-white shadow-lg">
+            <div class="navbar-start">
+                <a
+                    href="../index.html"
+                    class="btn btn-ghost normal-case text-xl"
+                >
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Kembali
+                </a>
             </div>
-            <div class="flex-none">
-                <ul class="menu menu-horizontal p-0">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
+            <div class="navbar-center">
+                <h1 class="text-xl font-bold">Makanan Pokok</h1>
             </div>
-        </div>
-        <div class="hero min-h-screen bg-base-200">
-            <div class="hero-content text-center">
-                <div class="max-w-md">
-                    <h1 class="text-5xl font-bold">Selamat Datang di Pokok</h1>
-                    <p class="py-6">
-                        Ini adalah halaman contoh untuk komponen pokok dalam
-                        proyek web.
-                    </p>
-                    <button class="btn btn-primary">Get Started</button>
+            <div class="navbar-end">
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <ul
+                        tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-gray-800"
+                    >
+                        <li>
+                            <a href="../index.html" class="text-gray-800"
+                                >Beranda</a
+                            >
+                        </li>
+                        <li>
+                            <a href="sayur.html" class="text-gray-800"
+                                >Sayur Mayur</a
+                            >
+                        </li>
+                        <li>
+                            <a href="lauk.html" class="text-gray-800"
+                                >Lauk Pauk</a
+                            >
+                        </li>
+                        <li>
+                            <a href="buah.html" class="text-gray-800"
+                                >Buah-buahan</a
+                            >
+                        </li>
+                        <li>
+                            <a href="susu.html" class="text-gray-800"
+                                >Minuman Susu</a
+                            >
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <div class="container mx-auto p-4">
-            <h2 class="text-3xl font-bold mb-4">Tentang Pokok</h2>
-            <p class="mb-4">
-                Pokok adalah sebuah proyek yang bertujuan untuk menyediakan
-                komponen dasar dalam pengembangan web.
-            </p>
-            <p>
-                Dengan menggunakan framework seperti DaisyUI dan Tailwind CSS,
-                kami dapat membuat antarmuka yang responsif dan menarik.
-            </p>
-        </div>
-    </body>
-    <footer>
-        <div class="footer footer-center p-4 bg-base-300 text-base-content">
-            <div>
-                <p>© 2023 Pokok. All rights reserved.</p>
+
+        <!-- Hero Section -->
+        <div
+            class="hero min-h-screen bg-gradient-to-br from-gray-100 via-gray-50 to-white"
+        >
+            <div class="hero-content text-center max-w-4xl">
+                <div>
+                    <div class="mb-8">
+                        <div
+                            class="w-32 h-32 mx-auto mb-6 bg-gray-200 rounded-full flex items-center justify-center"
+                        >
+                            <i
+                                class="fas fa-bread-slice text-6xl text-gray-600"
+                            ></i>
+                        </div>
+                        <h1 class="text-5xl font-bold text-gray-800 mb-6">
+                            Makanan Pokok
+                        </h1>
+                        <p class="text-xl text-gray-700 mb-8 leading-relaxed">
+                            Sumber karbohidrat utama yang memberikan energi
+                            untuk aktivitas sehari-hari dan menjadi fondasi pola
+                            makan sehat.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-    </footer>
+
+        <!-- Manfaat Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">
+                    Manfaat Makanan Pokok
+                </h2>
+
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
+                    <div
+                        class="bg-gray-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mb-4"
+                        >
+                            <i
+                                class="fas fa-battery-full text-2xl text-gray-600"
+                            ></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">
+                            Sumber Energi Utama
+                        </h3>
+                        <p class="text-gray-700">
+                            Karbohidrat kompleks memberikan energi yang stabil
+                            dan tahan lama untuk aktivitas harian.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-gray-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mb-4"
+                        >
+                            <i class="fas fa-brain text-2xl text-gray-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">
+                            Nutrisi untuk Otak
+                        </h3>
+                        <p class="text-gray-700">
+                            Glukosa dari karbohidrat merupakan bahan bakar utama
+                            untuk fungsi otak yang optimal.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-gray-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mb-4"
+                        >
+                            <i
+                                class="fas fa-seedling text-2xl text-gray-600"
+                            ></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">
+                            Serat untuk Pencernaan
+                        </h3>
+                        <p class="text-gray-700">
+                            Serat dalam biji-bijian membantu melancarkan
+                            pencernaan dan menjaga kesehatan usus.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-gray-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mb-4"
+                        >
+                            <i class="fas fa-weight text-2xl text-gray-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">
+                            Mengontrol Berat Badan
+                        </h3>
+                        <p class="text-gray-700">
+                            Karbohidrat kompleks memberikan rasa kenyang lebih
+                            lama dan membantu mengontrol nafsu makan.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-gray-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mb-4"
+                        >
+                            <i class="fas fa-heart text-2xl text-gray-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">
+                            Kesehatan Jantung
+                        </h3>
+                        <p class="text-gray-700">
+                            Beta-glukan dalam oat dan barley membantu menurunkan
+                            kolesterol dan menjaga kesehatan jantung.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-gray-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mb-4"
+                        >
+                            <i
+                                class="fas fa-shield-alt text-2xl text-gray-600"
+                            ></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">
+                            Vitamin B Kompleks
+                        </h3>
+                        <p class="text-gray-700">
+                            Biji-bijian utuh kaya akan vitamin B yang mendukung
+                            metabolisme dan sistem saraf.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Jenis Makanan Pokok Section -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">
+                    Jenis-Jenis Makanan Pokok
+                </h2>
+
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
+                    <div
+                        class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="h-48 bg-gradient-to-br from-yellow-200 to-yellow-300 flex items-center justify-center"
+                        >
+                            <i
+                                class="fas fa-seedling text-6xl text-yellow-600"
+                            ></i>
+                        </div>
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-800 mb-2"
+                            >
+                                Beras & Nasi
+                            </h3>
+                            <p class="text-gray-700 text-sm mb-3">
+                                Makanan pokok utama Indonesia, sumber
+                                karbohidrat
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-xs bg-yellow-100 text-yellow-600 px-2 py-1 rounded-full"
+                                    >Karbohidrat</span
+                                >
+                                <span
+                                    class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full"
+                                    >Vitamin B1</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="h-48 bg-gradient-to-br from-orange-200 to-orange-300 flex items-center justify-center"
+                        >
+                            <i
+                                class="fas fa-bread-slice text-6xl text-orange-600"
+                            ></i>
+                        </div>
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-800 mb-2"
+                            >
+                                Gandum & Roti
+                            </h3>
+                            <p class="text-gray-700 text-sm mb-3">
+                                Sumber karbohidrat kompleks dan serat
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-xs bg-orange-100 text-orange-600 px-2 py-1 rounded-full"
+                                    >Serat</span
+                                >
+                                <span
+                                    class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full"
+                                    >Protein</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="h-48 bg-gradient-to-br from-brown-200 to-amber-300 flex items-center justify-center"
+                        >
+                            <i
+                                class="fas fa-mountain text-6xl text-amber-600"
+                            ></i>
+                        </div>
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-800 mb-2"
+                            >
+                                Kentang & Ubi
+                            </h3>
+                            <p class="text-gray-700 text-sm mb-3">
+                                Umbi-umbian kaya vitamin dan mineral
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-xs bg-amber-100 text-amber-600 px-2 py-1 rounded-full"
+                                    >Vitamin C</span
+                                >
+                                <span
+                                    class="text-xs bg-orange-100 text-orange-600 px-2 py-1 rounded-full"
+                                    >Kalium</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="h-48 bg-gradient-to-br from-yellow-200 to-yellow-400 flex items-center justify-center"
+                        >
+                            <i class="fas fa-corn text-6xl text-yellow-600"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-800 mb-2"
+                            >
+                                Jagung
+                            </h3>
+                            <p class="text-gray-700 text-sm mb-3">
+                                Alternatif nasi dengan antioksidan tinggi
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-xs bg-yellow-100 text-yellow-600 px-2 py-1 rounded-full"
+                                    >Antioksidan</span
+                                >
+                                <span
+                                    class="text-xs bg-orange-100 text-orange-600 px-2 py-1 rounded-full"
+                                    >Lutein</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="h-48 bg-gradient-to-br from-green-200 to-green-300 flex items-center justify-center"
+                        >
+                            <i class="fas fa-leaf text-6xl text-green-600"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-800 mb-2"
+                            >
+                                Quinoa & Oat
+                            </h3>
+                            <p class="text-gray-700 text-sm mb-3">
+                                Superfood dengan protein lengkap
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-xs bg-green-100 text-green-600 px-2 py-1 rounded-full"
+                                    >Protein Lengkap</span
+                                >
+                                <span
+                                    class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full"
+                                    >Beta-glukan</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                    >
+                        <div
+                            class="h-48 bg-gradient-to-br from-purple-200 to-purple-300 flex items-center justify-center"
+                        >
+                            <i
+                                class="fas fa-cookie text-6xl text-purple-600"
+                            ></i>
+                        </div>
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-semibold text-gray-800 mb-2"
+                            >
+                                Sagu & Tapioka
+                            </h3>
+                            <p class="text-gray-700 text-sm mb-3">
+                                Makanan tradisional Indonesia dari tepung
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-xs bg-purple-100 text-purple-600 px-2 py-1 rounded-full"
+                                    >Energi Cepat</span
+                                >
+                                <span
+                                    class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full"
+                                    >Bebas Gluten</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">
+                    Tips Mengonsumsi Makanan Pokok
+                </h2>
+
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+                >
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0"
+                        >
+                            <span class="text-gray-600 font-bold">1</span>
+                        </div>
+                        <div>
+                            <h3
+                                class="text-xl font-semibold text-gray-800 mb-2"
+                            >
+                                Pilih yang Utuh
+                            </h3>
+                            <p class="text-gray-700">
+                                Pilih biji-bijian utuh seperti beras merah,
+                                gandum utuh, atau oat untuk mendapat nutrisi
+                                maksimal.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0"
+                        >
+                            <span class="text-gray-600 font-bold">2</span>
+                        </div>
+                        <div>
+                            <h3
+                                class="text-xl font-semibold text-gray-800 mb-2"
+                            >
+                                Porsi yang Tepat
+                            </h3>
+                            <p class="text-gray-700">
+                                Konsumsi 3-4 porsi makanan pokok per hari,
+                                disesuaikan dengan aktivitas dan kebutuhan
+                                energi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0"
+                        >
+                            <span class="text-gray-600 font-bold">3</span>
+                        </div>
+                        <div>
+                            <h3
+                                class="text-xl font-semibold text-gray-800 mb-2"
+                            >
+                                Variasi Menu
+                            </h3>
+                            <p class="text-gray-700">
+                                Variasikan jenis makanan pokok untuk mendapat
+                                spektrum nutrisi yang lebih luas dan mencegah
+                                kebosanan.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0"
+                        >
+                            <span class="text-gray-600 font-bold">4</span>
+                        </div>
+                        <div>
+                            <h3
+                                class="text-xl font-semibold text-gray-800 mb-2"
+                            >
+                                Kombinasi Seimbang
+                            </h3>
+                            <p class="text-gray-700">
+                                Kombinasikan dengan sayur, lauk, dan buah untuk
+                                menciptakan piring yang seimbang dan bergizi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0"
+                        >
+                            <span class="text-gray-600 font-bold">5</span>
+                        </div>
+                        <div>
+                            <h3
+                                class="text-xl font-semibold text-gray-800 mb-2"
+                            >
+                                Metode Memasak Sehat
+                            </h3>
+                            <p class="text-gray-700">
+                                Pilih metode memasak yang sehat seperti
+                                mengukus, merebus, atau memanggang tanpa minyak
+                                berlebih.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0"
+                        >
+                            <span class="text-gray-600 font-bold">6</span>
+                        </div>
+                        <div>
+                            <h3
+                                class="text-xl font-semibold text-gray-800 mb-2"
+                            >
+                                Waktu Makan Teratur
+                            </h3>
+                            <p class="text-gray-700">
+                                Makan makanan pokok pada waktu yang teratur
+                                untuk menjaga kadar gula darah stabil sepanjang
+                                hari.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white py-8">
+            <div class="container mx-auto px-4 text-center">
+                <div class="mb-4">
+                    <h3 class="text-2xl font-bold mb-2">4 Sehat 5 Sempurna</h3>
+                    <p class="text-gray-300">
+                        Panduan Hidup Sehat untuk Indonesia
+                    </p>
+                </div>
+                <div class="flex justify-center space-x-6 mb-4">
+                    <a
+                        href="../index.html"
+                        class="hover:text-gray-300 transition-colors"
+                        >Beranda</a
+                    >
+                    <a
+                        href="sayur.html"
+                        class="hover:text-gray-300 transition-colors"
+                        >Sayur Mayur</a
+                    >
+                    <a
+                        href="lauk.html"
+                        class="hover:text-gray-300 transition-colors"
+                        >Lauk Pauk</a
+                    >
+                    <a
+                        href="buah.html"
+                        class="hover:text-gray-300 transition-colors"
+                        >Buah-buahan</a
+                    >
+                    <a
+                        href="susu.html"
+                        class="hover:text-gray-300 transition-colors"
+                        >Minuman Susu</a
+                    >
+                </div>
+                <p class="text-gray-400 text-sm">
+                    © 2024 4 Sehat 5 Sempurna. All rights reserved.
+                </p>
+            </div>
+        </footer>
+    </body>
 </html>
