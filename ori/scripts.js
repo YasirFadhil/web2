@@ -670,10 +670,10 @@ class QuizManager {
       this.score++;
       this.streak++;
       this.bestStreak = Math.max(this.bestStreak, this.streak);
-      this.showFeedback("Benar!", "success");
+      // this.showFeedback("Benar!", "success");
     } else {
       this.streak = 0;
-      this.showFeedback("Salah!", "error");
+      // this.showFeedback("Salah!", "error");
     }
 
     // Visual feedback pada tombol
