@@ -17,7 +17,7 @@
     </head>
     <body class="bg-gray-100 font-poppins">
         <!-- navigation -->
-        <nav class="bg-white shadow-md">
+        <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
             <div class="container mx-auto px-4">
                 <!-- mobile navigation -->
                 <div class="md:hidden py-4">
@@ -115,7 +115,7 @@
         <!-- hero section -->
         <section
             id="home"
-            class="w-full h-screen bg-[url('assets/BG1.jpg')] bg-cover bg-center text-white flex items-center justify-center"
+            class="w-full h-screen bg-[url('assets/BG1.jpg')] bg-cover bg-center text-white flex items-center justify-center mt-20"
         >
             <div class="container mx-auto px-4 text-center">
                 <h1 class="text-4xl md:text-5xl font-bold mb-4">
@@ -298,21 +298,81 @@
                 <h2 class="text-3xl font-bold text-center mb-8 text-green-600">
                     Manfaat Hidup Sehat
                 </h2>
-                <ul
-                    class="list-disc list-inside text-gray-700 text-lg leading-relaxed"
-                >
-                    <li>Meningkatkan energi dan vitalitas tubuh.</li>
-                    <li>
-                        Mengurangi risiko penyakit kronis seperti diabetes,
-                        hipertensi, dan penyakit jantung.
-                    </li>
-                    <li>Meningkatkan sistem kekebalan tubuh.</li>
-                    <li>Meningkatkan kualitas tidur.</li>
-                    <li>Meningkatkan kesehatan mental dan mengurangi stres.</li>
-                    <li>Membantu dalam pengelolaan berat badan yang sehat.</li>
-                    <li>Meningkatkan konsentrasi dan produktivitas.</li>
-                    <li>Meningkatkan kualitas hidup secara keseluruhan.</li>
-                </ul>
+                <!--card-->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer hover:transform hover:scale-105"
+                    >
+                        <h3 class="text-xl font-semibold mb-2 text-center">
+                            Meningkatkan Kesehatan Fisik
+                        </h3>
+                        <p class="text-gray-700 text-justify">
+                            Dengan mengonsumsi makanan bergizi dan berolahraga
+                            secara teratur, tubuh menjadi lebih kuat dan tahan
+                            terhadap penyakit.
+                        </p>
+                    </div>
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer hover:transform hover:scale-105"
+                    >
+                        <h3 class="text-xl font-semibold mb-2 text-center">
+                            Meningkatkan Kesehatan Mental
+                        </h3>
+                        <p class="text-gray-700 text-justify">
+                            Pola hidup sehat membantu mengurangi stres dan
+                            meningkatkan suasana hati, sehingga pikiran menjadi
+                            lebih jernih dan fokus.
+                        </p>
+                    </div>
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer hover:transform hover:scale-105"
+                    >
+                        <h3 class="text-xl font-semibold mb-2 text-center">
+                            Meningkatkan Energi dan Produktivitas
+                        </h3>
+                        <p class="text-gray-700 text-justify">
+                            Dengan tubuh yang sehat, seseorang akan memiliki
+                            lebih banyak energi untuk menjalani aktivitas
+                            sehari-hari dengan lebih efisien.
+                        </p>
+                    </div>
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer hover:transform hover:scale-105"
+                    >
+                        <h3 class="text-xl font-semibold mb-2 text-center">
+                            Mencegah Penyakit Kronis
+                        </h3>
+                        <p class="text-gray-700 text-justify">
+                            Pola hidup sehat dapat membantu mengurangi risiko
+                            terkena penyakit kronis seperti diabetes,
+                            hipertensi, dan penyakit jantung.
+                        </p>
+                    </div>
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer hover:transform hover:scale-105"
+                    >
+                        <h3 class="text-xl font-semibold mb-2 text-center">
+                            Meningkatkan Kualitas Hidup
+                        </h3>
+                        <p class="text-gray-700 text-justify">
+                            Dengan hidup sehat, seseorang dapat menikmati hidup
+                            dengan lebih baik, merasa lebih bahagia, dan
+                            memiliki harapan hidup yang lebih panjang.
+                        </p>
+                    </div>
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer hover:transform hover:scale-105"
+                    >
+                        <h3 class="text-xl font-semibold mb-2 text-center">
+                            Meningkatkan Sistem Kekebalan Tubuh
+                        </h3>
+                        <p class="text-gray-700 text-justify">
+                            Pola makan yang seimbang dan gaya hidup aktif dapat
+                            memperkuat sistem kekebalan tubuh, sehingga tubuh
+                            lebih mampu melawan infeksi dan penyakit.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- footer -->
