@@ -1,0 +1,1000 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Demo API Health Quiz Server</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
+        <style>
+            .notification {
+                animation: slideIn 0.3s ease-out;
+            }
+            @keyframes slideIn {
+                from {
+                    transform: translateX(100px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+            .demo-section {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            }
+            .api-card {
+                transition: all 0.3s ease;
+            }
+            .api-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            }
+        </style>
+    </head>
+    <body class="bg-gray-50 min-h-screen">
+        <!-- Header -->
+        <header class="demo-section text-white py-16">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    <i class="fas fa-heartbeat text-red-300 mr-4"></i>
+                    Health Quiz API Demo
+                </h1>
+                <p class="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
+                    Demonstrasi lengkap API server Node.js untuk aplikasi quiz
+                    kesehatan dengan berbagai fitur interaktif
+                </p>
+                <div class="mt-8">
+                    <button
+                        onclick="testServerConnection()"
+                        class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors"
+                    >
+                        <i class="fas fa-plug mr-2"></i>Test Server Connection
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white shadow-sm sticky top-0 z-40">
+            <div class="container mx-auto px-4">
+                <div class="flex space-x-8 overflow-x-auto py-4">
+                    <button
+                        onclick="showSection('quiz')"
+                        class="nav-btn flex-shrink-0 px-4 py-2 rounded-lg font-medium transition-colors"
+                    >
+                        <i class="fas fa-question-circle mr-2"></i>Quiz API
+                    </button>
+                    <button
+                        onclick="showSection('bmi')"
+                        class="nav-btn flex-shrink-0 px-4 py-2 rounded-lg font-medium transition-colors"
+                    >
+                        <i class="fas fa-calculator mr-2"></i>BMI Calculator
+                    </button>
+                    <button
+                        onclick="showSection('tips')"
+                        class="nav-btn flex-shrink-0 px-4 py-2 rounded-lg font-medium transition-colors"
+                    >
+                        <i class="fas fa-lightbulb mr-2"></i>Health Tips
+                    </button>
+                    <button
+                        onclick="showSection('stats')"
+                        class="nav-btn flex-shrink-0 px-4 py-2 rounded-lg font-medium transition-colors"
+                    >
+                        <i class="fas fa-chart-bar mr-2"></i>Statistics
+                    </button>
+                    <button
+                        onclick="showSection('test')"
+                        class="nav-btn flex-shrink-0 px-4 py-2 rounded-lg font-medium transition-colors"
+                    >
+                        <i class="fas fa-vial mr-2"></i>API Tester
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Server Status -->
+        <div class="container mx-auto px-4 py-6">
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800">
+                            Server Status
+                        </h3>
+                        <p class="text-gray-600" id="server-status">
+                            Checking connection...
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="flex items-center">
+                            <div
+                                id="status-indicator"
+                                class="w-3 h-3 rounded-full bg-gray-400 mr-2"
+                            ></div>
+                            <span id="status-text" class="text-sm text-gray-500"
+                                >Unknown</span
+                            >
+                        </div>
+                        <button
+                            onclick="refreshServerStatus()"
+                            class="text-blue-500 hover:text-blue-700"
+                        >
+                            <i class="fas fa-refresh"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-4 pb-12">
+            <!-- Quiz API Demo Section -->
+            <section id="quiz-section" class="demo-section-content">
+                <div class="api-card bg-white rounded-lg shadow-md p-6 mb-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">
+                        <i class="fas fa-question-circle text-blue-500 mr-3"></i
+                        >Quiz API Demo
+                    </h2>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Get Questions -->
+                        <div class="space-y-4">
+                            <h3 class="text-lg font-semibold text-gray-700">
+                                Load Quiz Questions
+                            </h3>
+                            <button
+                                onclick="loadQuizQuestions()"
+                                class="w-full bg-blue-500 text-white py-3 px-4 rounded-lg hover:bg-blue-600 transition-colors"
+                            >
+                                <i class="fas fa-download mr-2"></i>Load
+                                Questions
+                            </button>
+                            <div
+                                id="questions-result"
+                                class="bg-gray-50 p-4 rounded-lg min-h-32 overflow-auto"
+                            >
+                                <p class="text-gray-500 text-center">
+                                    Click button to load questions
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Submit Quiz -->
+                        <div class="space-y-4">
+                            <h3 class="text-lg font-semibold text-gray-700">
+                                Submit Sample Quiz
+                            </h3>
+                            <button
+                                onclick="submitSampleQuiz()"
+                                class="w-full bg-green-500 text-white py-3 px-4 rounded-lg hover:bg-green-600 transition-colors"
+                            >
+                                <i class="fas fa-paper-plane mr-2"></i>Submit
+                                Sample Answers
+                            </button>
+                            <div
+                                id="quiz-result"
+                                class="bg-gray-50 p-4 rounded-lg min-h-32 overflow-auto"
+                            >
+                                <p class="text-gray-500 text-center">
+                                    Submit quiz to see results
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BMI Calculator Demo Section -->
+            <section id="bmi-section" class="demo-section-content hidden">
+                <div class="api-card bg-white rounded-lg shadow-md p-6 mb-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">
+                        <i class="fas fa-calculator text-green-500 mr-3"></i>BMI
+                        Calculator Demo
+                    </h2>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- BMI Input -->
+                        <div class="space-y-4">
+                            <h3 class="text-lg font-semibold text-gray-700">
+                                Calculate BMI
+                            </h3>
+                            <div class="space-y-3">
+                                <div>
+                                    <label
+                                        class="block text-sm font-medium text-gray-700 mb-1"
+                                        >Berat Badan (kg)</label
+                                    >
+                                    <input
+                                        type="number"
+                                        id="weight-input"
+                                        class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                                        placeholder="70"
+                                        value="70"
+                                    />
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-sm font-medium text-gray-700 mb-1"
+                                        >Tinggi Badan (cm)</label
+                                    >
+                                    <input
+                                        type="number"
+                                        id="height-input"
+                                        class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                                        placeholder="175"
+                                        value="175"
+                                    />
+                                </div>
+                                <button
+                                    onclick="calculateBMI()"
+                                    class="w-full bg-green-500 text-white py-3 px-4 rounded-lg hover:bg-green-600 transition-colors"
+                                >
+                                    <i class="fas fa-calculator mr-2"></i
+                                    >Calculate BMI
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- BMI Result -->
+                        <div class="space-y-4">
+                            <h3 class="text-lg font-semibold text-gray-700">
+                                BMI Result
+                            </h3>
+                            <div
+                                id="bmi-result"
+                                class="bg-gray-50 p-4 rounded-lg min-h-48"
+                            >
+                                <p class="text-gray-500 text-center">
+                                    Enter weight and height, then calculate
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Health Tips Demo Section -->
+            <section id="tips-section" class="demo-section-content hidden">
+                <div class="api-card bg-white rounded-lg shadow-md p-6 mb-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">
+                        <i class="fas fa-lightbulb text-yellow-500 mr-3"></i
+                        >Health Tips Demo
+                    </h2>
+
+                    <div class="space-y-4">
+                        <div class="flex space-x-4">
+                            <button
+                                onclick="loadHealthTips()"
+                                class="bg-yellow-500 text-white py-2 px-4 rounded-lg hover:bg-yellow-600 transition-colors"
+                            >
+                                <i class="fas fa-download mr-2"></i>Load All
+                                Tips
+                            </button>
+                            <button
+                                onclick="getRandomTip()"
+                                class="bg-orange-500 text-white py-2 px-4 rounded-lg hover:bg-orange-600 transition-colors"
+                            >
+                                <i class="fas fa-random mr-2"></i>Random Tip
+                            </button>
+                            <button
+                                onclick="getDailyTip()"
+                                class="bg-purple-500 text-white py-2 px-4 rounded-lg hover:bg-purple-600 transition-colors"
+                            >
+                                <i class="fas fa-calendar-day mr-2"></i>Daily
+                                Tip
+                            </button>
+                        </div>
+
+                        <div
+                            id="tips-result"
+                            class="bg-gray-50 p-4 rounded-lg min-h-64 overflow-auto"
+                        >
+                            <p class="text-gray-500 text-center">
+                                Click any button to load health tips
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Statistics Demo Section -->
+            <section id="stats-section" class="demo-section-content hidden">
+                <div class="api-card bg-white rounded-lg shadow-md p-6 mb-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">
+                        <i class="fas fa-chart-bar text-purple-500 mr-3"></i
+                        >Quiz Statistics Demo
+                    </h2>
+
+                    <div class="space-y-4">
+                        <button
+                            onclick="loadQuizStats()"
+                            class="bg-purple-500 text-white py-2 px-6 rounded-lg hover:bg-purple-600 transition-colors"
+                        >
+                            <i class="fas fa-chart-line mr-2"></i>Load
+                            Statistics
+                        </button>
+
+                        <div
+                            id="stats-result"
+                            class="bg-gray-50 p-4 rounded-lg min-h-48"
+                        >
+                            <p class="text-gray-500 text-center">
+                                Click button to load quiz statistics
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- API Tester Section -->
+            <section id="test-section" class="demo-section-content hidden">
+                <div class="api-card bg-white rounded-lg shadow-md p-6 mb-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">
+                        <i class="fas fa-vial text-red-500 mr-3"></i>API
+                        Endpoint Tester
+                    </h2>
+
+                    <div class="space-y-6">
+                        <!-- Method and URL -->
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <div>
+                                <label
+                                    class="block text-sm font-medium text-gray-700 mb-1"
+                                    >Method</label
+                                >
+                                <select
+                                    id="test-method"
+                                    class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                >
+                                    <option value="GET">GET</option>
+                                    <option value="POST">POST</option>
+                                    <option value="PUT">PUT</option>
+                                    <option value="DELETE">DELETE</option>
+                                </select>
+                            </div>
+                            <div class="md:col-span-2">
+                                <label
+                                    class="block text-sm font-medium text-gray-700 mb-1"
+                                    >API Endpoint</label
+                                >
+                                <select
+                                    id="test-url"
+                                    class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    onchange="updateTestMethod()"
+                                >
+                                    <option value="/api/health">
+                                        GET /api/health
+                                    </option>
+                                    <option value="/api/quiz/questions">
+                                        GET /api/quiz/questions
+                                    </option>
+                                    <option value="/api/quiz/submit">
+                                        POST /api/quiz/submit
+                                    </option>
+                                    <option value="/api/quiz/stats">
+                                        GET /api/quiz/stats
+                                    </option>
+                                    <option value="/api/health/tips">
+                                        GET /api/health/tips
+                                    </option>
+                                    <option value="/api/health/bmi">
+                                        POST /api/health/bmi
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Request Body -->
+                        <div id="request-body-section">
+                            <label
+                                class="block text-sm font-medium text-gray-700 mb-1"
+                                >Request Body (JSON)</label
+                            >
+                            <textarea
+                                id="test-body"
+                                rows="6"
+                                class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono text-sm"
+                                placeholder='{"key": "value"}'
+                            ></textarea>
+                        </div>
+
+                        <!-- Send Request -->
+                        <button
+                            onclick="sendTestRequest()"
+                            class="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition-colors"
+                        >
+                            <i class="fas fa-paper-plane mr-2"></i>Send Request
+                        </button>
+
+                        <!-- Response -->
+                        <div>
+                            <label
+                                class="block text-sm font-medium text-gray-700 mb-1"
+                                >Response</label
+                            >
+                            <div
+                                id="test-result"
+                                class="bg-gray-50 border rounded-lg p-4 min-h-48 overflow-auto"
+                            >
+                                <p class="text-gray-500 text-center">
+                                    Configure request and click Send Request
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Include API Client -->
+        <script src="api-client.js"></script>
+
+        <script>
+            // Global variables
+            let currentSection = "quiz";
+            let quizManager = new QuizManager();
+            let healthTipsManager = new HealthTipsManager();
+
+            // Initialize
+            document.addEventListener("DOMContentLoaded", function () {
+                showSection("quiz");
+                checkServerStatus();
+                updateTestMethod(); // Initialize test section
+            });
+
+            // Navigation
+            function showSection(section) {
+                // Hide all sections
+                document
+                    .querySelectorAll(".demo-section-content")
+                    .forEach((el) => {
+                        el.classList.add("hidden");
+                    });
+
+                // Show selected section
+                document
+                    .getElementById(section + "-section")
+                    .classList.remove("hidden");
+
+                // Update nav buttons
+                document.querySelectorAll(".nav-btn").forEach((btn) => {
+                    btn.classList.remove("bg-blue-500", "text-white");
+                    btn.classList.add("text-gray-600", "hover:text-gray-800");
+                });
+
+                event.target.classList.add("bg-blue-500", "text-white");
+                event.target.classList.remove(
+                    "text-gray-600",
+                    "hover:text-gray-800",
+                );
+
+                currentSection = section;
+            }
+
+            // Server Status
+            async function checkServerStatus() {
+                try {
+                    const response = await api.healthCheck();
+                    updateServerStatus(true, response.message, response.uptime);
+                } catch (error) {
+                    updateServerStatus(false, error.message);
+                }
+            }
+
+            function updateServerStatus(isOnline, message, uptime = null) {
+                const indicator = document.getElementById("status-indicator");
+                const statusText = document.getElementById("status-text");
+                const statusMessage = document.getElementById("server-status");
+
+                if (isOnline) {
+                    indicator.className =
+                        "w-3 h-3 rounded-full bg-green-400 mr-2";
+                    statusText.textContent = "Online";
+                    statusText.className = "text-sm text-green-600";
+                    statusMessage.textContent =
+                        message +
+                        (uptime ? ` (Uptime: ${Math.floor(uptime)}s)` : "");
+                } else {
+                    indicator.className =
+                        "w-3 h-3 rounded-full bg-red-400 mr-2";
+                    statusText.textContent = "Offline";
+                    statusText.className = "text-sm text-red-600";
+                    statusMessage.textContent = `Connection failed: ${message}`;
+                }
+            }
+
+            async function refreshServerStatus() {
+                updateServerStatus(false, "Checking...");
+                await checkServerStatus();
+            }
+
+            async function testServerConnection() {
+                try {
+                    const response = await api.healthCheck();
+                    NotificationManager.showSuccess(
+                        "Server connection successful!",
+                    );
+                    console.log("Server response:", response);
+                } catch (error) {
+                    NotificationManager.showError("Server connection failed!");
+                    console.error("Connection error:", error);
+                }
+            }
+
+            // Quiz Functions
+            async function loadQuizQuestions() {
+                const resultDiv = document.getElementById("questions-result");
+                resultDiv.innerHTML =
+                    '<div class="text-center"><i class="fas fa-spinner fa-spin"></i> Loading...</div>';
+
+                try {
+                    const response = await api.quiz.getQuestions();
+                    const questions = response.data;
+
+                    let html = '<div class="space-y-3">';
+                    questions.forEach((q, index) => {
+                        html += `
+                        <div class="border-l-4 border-blue-400 pl-4">
+                            <p class="font-medium text-gray-800">${index + 1}. ${q.question}</p>
+                            <ul class="mt-2 space-y-1">
+                                ${q.options
+                                    .map(
+                                        (option, i) => `
+                                    <li class="text-sm text-gray-600">• ${option}</li>
+                                `,
+                                    )
+                                    .join("")}
+                            </ul>
+                        </div>
+                    `;
+                    });
+                    html += "</div>";
+
+                    resultDiv.innerHTML = html;
+                    NotificationManager.showSuccess(
+                        "Questions loaded successfully!",
+                    );
+                } catch (error) {
+                    resultDiv.innerHTML = `<div class="text-red-600">Error: ${error.message}</div>`;
+                    NotificationManager.showError("Failed to load questions");
+                }
+            }
+
+            async function submitSampleQuiz() {
+                const resultDiv = document.getElementById("quiz-result");
+                resultDiv.innerHTML =
+                    '<div class="text-center"><i class="fas fa-spinner fa-spin"></i> Submitting...</div>';
+
+                // Sample answers (random for demo)
+                const sampleAnswers = [
+                    { questionId: 1, selectedOption: 2 },
+                    { questionId: 2, selectedOption: 1 },
+                    { questionId: 3, selectedOption: 1 },
+                    { questionId: 4, selectedOption: 2 },
+                    { questionId: 5, selectedOption: 2 },
+                ];
+
+                const userInfo = {
+                    name: "Demo User",
+                    email: "demo@example.com",
+                };
+
+                try {
+                    const response = await api.quiz.submit(
+                        sampleAnswers,
+                        userInfo,
+                    );
+                    const result = response.data;
+
+                    const html = `
+                    <div class="space-y-4">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-green-600">${result.percentage}%</div>
+                            <div class="text-lg text-gray-700">${result.healthStatus}</div>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Score Details:</h4>
+                            <p class="text-sm text-gray-600">${result.score} out of ${result.totalQuestions} correct</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Recommendations:</h4>
+                            <ul class="list-disc list-inside space-y-1">
+                                ${result.recommendations.map((rec) => `<li class="text-sm text-gray-600">${rec}</li>`).join("")}
+                            </ul>
+                        </div>
+                    </div>
+                `;
+
+                    resultDiv.innerHTML = html;
+                    NotificationManager.showSuccess(
+                        "Quiz submitted successfully!",
+                    );
+                } catch (error) {
+                    resultDiv.innerHTML = `<div class="text-red-600">Error: ${error.message}</div>`;
+                    NotificationManager.showError("Failed to submit quiz");
+                }
+            }
+
+            // BMI Functions
+            async function calculateBMI() {
+                const weight = parseFloat(
+                    document.getElementById("weight-input").value,
+                );
+                const height = parseFloat(
+                    document.getElementById("height-input").value,
+                );
+                const resultDiv = document.getElementById("bmi-result");
+
+                if (!weight || !height) {
+                    NotificationManager.showError(
+                        "Please enter valid weight and height",
+                    );
+                    return;
+                }
+
+                resultDiv.innerHTML =
+                    '<div class="text-center"><i class="fas fa-spinner fa-spin"></i> Calculating...</div>';
+
+                try {
+                    const response = await api.health.calculateBMI(
+                        weight,
+                        height,
+                    );
+                    const result = response.data;
+
+                    // Determine color based on category
+                    let categoryColor = "text-green-600";
+                    if (result.bmi < 18.5 || result.bmi >= 30) {
+                        categoryColor = "text-red-600";
+                    } else if (result.bmi >= 25) {
+                        categoryColor = "text-yellow-600";
+                    }
+
+                    const html = `
+                    <div class="space-y-4">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-blue-600">${result.bmi}</div>
+                            <div class="text-lg font-semibold ${categoryColor}">${result.category}</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border">
+                            <h4 class="font-semibold text-gray-800 mb-2">Input:</h4>
+                            <p class="text-sm text-gray-600">Weight: ${result.weight} kg</p>
+                            <p class="text-sm text-gray-600">Height: ${result.height} cm</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-blue-800 mb-2">Recommendation:</h4>
+                            <p class="text-sm text-blue-700">${result.recommendation}</p>
+                        </div>
+                    </div>
+                `;
+
+                    resultDiv.innerHTML = html;
+                    NotificationManager.showSuccess(
+                        "BMI calculated successfully!",
+                    );
+                } catch (error) {
+                    resultDiv.innerHTML = `<div class="text-red-600">Error: ${error.message}</div>`;
+                    NotificationManager.showError("Failed to calculate BMI");
+                }
+            }
+
+            // Health Tips Functions
+            async function loadHealthTips() {
+                const resultDiv = document.getElementById("tips-result");
+                resultDiv.innerHTML =
+                    '<div class="text-center"><i class="fas fa-spinner fa-spin"></i> Loading...</div>';
+
+                try {
+                    const tips = await healthTipsManager.loadTips();
+
+                    let html = '<div class="space-y-6">';
+                    tips.forEach((category) => {
+                        html += `
+                        <div class="border border-gray-200 rounded-lg p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-3 flex items-center">
+                                <i class="fas fa-${getCategoryIcon(category.category)} mr-2 text-${getCategoryColor(category.category)}-500"></i>
+                                ${category.category}
+                            </h3>
+                            <ul class="space-y-2">
+                                ${category.tips
+                                    .map(
+                                        (tip) => `
+                                    <li class="text-sm text-gray-600 flex items-start">
+                                        <i class="fas fa-check-circle text-green-400 mr-2 mt-0.5 flex-shrink-0"></i>
+                                        ${tip}
+                                    </li>
+                                `,
+                                    )
+                                    .join("")}
+                            </ul>
+                        </div>
+                    `;
+                    });
+                    html += "</div>";
+
+                    resultDiv.innerHTML = html;
+                    NotificationManager.showSuccess(
+                        "Health tips loaded successfully!",
+                    );
+                } catch (error) {
+                    resultDiv.innerHTML = `<div class="text-red-600">Error: ${error.message}</div>`;
+                    NotificationManager.showError("Failed to load health tips");
+                }
+            }
+
+            async function getRandomTip() {
+                const resultDiv = document.getElementById("tips-result");
+
+                if (healthTipsManager.tips.length === 0) {
+                    await healthTipsManager.loadTips();
+                }
+
+                const tip = healthTipsManager.getRandomTip();
+                if (tip) {
+                    const html = `
+                    <div class="text-center space-y-4">
+                        <div class="text-6xl">🎲</div>
+                        <div class="bg-gradient-to-r from-orange-400 to-pink-400 text-white p-6 rounded-lg">
+                            <h3 class="text-lg font-semibold mb-2">${tip.category}</h3>
+                            <p class="text-orange-100">${tip.tip}</p>
+                        </div>
+                    </div>
+                `;
+                    resultDiv.innerHTML = html;
+                    NotificationManager.showInfo("Random tip generated!");
+                } else {
+                    NotificationManager.showError("No tips available");
+                }
+            }
+
+            async function getDailyTip() {
+                const resultDiv = document.getElementById("tips-result");
+
+                if (healthTipsManager.tips.length === 0) {
+                    await healthTipsManager.loadTips();
+                }
+
+                const tip = healthTipsManager.getDailyTip();
+                if (tip) {
+                    const today = new Date().toLocaleDateString("id-ID", {
+                        weekday: "long",
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                    });
+
+                    const html = `
+                    <div class="text-center space-y-4">
+                        <div class="text-6xl">📅</div>
+                        <div class="bg-gradient-to-r from-purple-400 to-indigo-500 text-white p-6 rounded-lg">
+                            <h3 class="text-sm font-medium mb-1 text-purple-200">${today}</h3>
+                            <h3 class="text-lg font-semibold mb-2">${tip.category}</h3>
+                            <p class="text-purple-100">${tip.tip}</p>
+                        </div>
+                    </div>
+                `;
+                    resultDiv.innerHTML = html;
+                    NotificationManager.showInfo("Daily tip loaded!");
+                } else {
+                    NotificationManager.showError("No tips available");
+                }
+            }
+
+            // Statistics Functions
+            async function loadQuizStats() {
+                const resultDiv = document.getElementById("stats-result");
+                resultDiv.innerHTML =
+                    '<div class="text-center"><i class="fas fa-spinner fa-spin"></i> Loading...</div>';
+
+                try {
+                    const stats = await StatsManager.getQuizStats();
+                    const formattedStats = StatsManager.formatStats(stats);
+
+                    const html = `
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-4">
+                            <h3 class="text-lg font-semibold text-gray-800">Overall Statistics</h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-blue-50 p-4 rounded-lg text-center">
+                                    <div class="text-2xl font-bold text-blue-600">${formattedStats.totalAttempts}</div>
+                                    <div class="text-sm text-blue-700">Total Attempts</div>
+                                </div>
+                                <div class="bg-green-50 p-4 rounded-lg text-center">
+                                    <div class="text-2xl font-bold text-green-600">${formattedStats.averageScore}</div>
+                                    <div class="text-sm text-green-700">Average Score</div>
+                                </div>
+                                <div class="bg-yellow-50 p-4 rounded-lg text-center">
+                                    <div class="text-2xl font-bold text-yellow-600">${formattedStats.highestScore}</div>
+                                    <div class="text-sm text-yellow-700">Highest Score</div>
+                                </div>
+                                <div class="bg-red-50 p-4 rounded-lg text-center">
+                                    <div class="text-2xl font-bold text-red-600">${formattedStats.lowestScore}</div>
+                                    <div class="text-sm text-red-700">Lowest Score</div>
+                                </div>
+                            </div>
+                            <div class="space-y-4">
+                                <h3 class="text-lg font-semibold text-gray-800">Recent Results</h3>
+                                <div class="space-y-2">
+                                    ${
+                                        formattedStats.recentResults.length > 0
+                                            ? formattedStats.recentResults
+                                                  .map(
+                                                      (result, index) => `
+                                            <div class="bg-gray-50 p-3 rounded-lg text-sm">
+                                                <div class="flex justify-between items-center">
+                                                    <span class="text-gray-600">Result #${index + 1}</span>
+                                                    <span class="font-semibold text-gray-800">${result.percentage}%</span>
+                                                </div>
+                                                <div class="text-xs text-gray-500 mt-1">
+                                                    ${new Date(result.timestamp).toLocaleDateString()}
+                                                </div>
+                                            </div>
+                                        `,
+                                                  )
+                                                  .join("")
+                                            : '<p class="text-gray-500 text-center">No recent results</p>'
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    `;
+
+                    resultDiv.innerHTML = html;
+                    NotificationManager.showSuccess(
+                        "Statistics loaded successfully!",
+                    );
+                } catch (error) {
+                    resultDiv.innerHTML = `<div class="text-red-600">Error: ${error.message}</div>`;
+                    NotificationManager.showError("Failed to load statistics");
+                }
+            }
+
+            // API Tester Functions
+            function updateTestMethod() {
+                const urlSelect = document.getElementById("test-url");
+                const methodSelect = document.getElementById("test-method");
+                const bodySection = document.getElementById(
+                    "request-body-section",
+                );
+                const bodyTextarea = document.getElementById("test-body");
+
+                const selectedUrl = urlSelect.value;
+
+                // Update method based on URL
+                if (
+                    selectedUrl.includes("/submit") ||
+                    selectedUrl.includes("/bmi")
+                ) {
+                    methodSelect.value = "POST";
+                    bodySection.style.display = "block";
+
+                    // Set sample body based on endpoint
+                    if (selectedUrl.includes("/submit")) {
+                        bodyTextarea.value = JSON.stringify(
+                            {
+                                answers: [
+                                    { questionId: 1, selectedOption: 2 },
+                                    { questionId: 2, selectedOption: 1 },
+                                ],
+                                userInfo: {
+                                    name: "Test User",
+                                    email: "test@example.com",
+                                },
+                            },
+                            null,
+                            2,
+                        );
+                    } else if (selectedUrl.includes("/bmi")) {
+                        bodyTextarea.value = JSON.stringify(
+                            {
+                                weight: 70,
+                                height: 175,
+                            },
+                            null,
+                            2,
+                        );
+                    }
+                } else {
+                    methodSelect.value = "GET";
+                    bodySection.style.display = "none";
+                    bodyTextarea.value = "";
+                }
+            }
+
+            async function sendTestRequest() {
+                const method = document.getElementById("test-method").value;
+                const url = document.getElementById("test-url").value;
+                const body = document.getElementById("test-body").value;
+                const resultDiv = document.getElementById("test-result");
+
+                resultDiv.innerHTML =
+                    '<div class="text-center"><i class="fas fa-spinner fa-spin"></i> Sending request...</div>';
+
+                try {
+                    const options = {
+                        method: method,
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                    };
+
+                    if (method !== "GET" && body.trim()) {
+                        try {
+                            JSON.parse(body); // Validate JSON
+                            options.body = body;
+                        } catch (e) {
+                            throw new Error("Invalid JSON in request body");
+                        }
+                    }
+
+                    const response = await fetch(url, options);
+                    const data = await response.json();
+
+                    const html = `
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <h4 class="font-semibold text-gray-800">Response</h4>
+                                <span class="text-sm px-2 py-1 rounded ${response.ok ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"}">
+                                    ${response.status} ${response.statusText}
+                                </span>
+                            </div>
+                            <div class="bg-white border rounded-lg p-4 overflow-auto">
+                                <pre class="text-sm text-gray-800 whitespace-pre-wrap">${JSON.stringify(data, null, 2)}</pre>
+                            </div>
+                            <div class="text-xs text-gray-500">
+                                <div>URL: ${method} ${url}</div>
+                                <div>Time: ${new Date().toLocaleTimeString()}</div>
+                            </div>
+                        </div>
+                    `;
+
+                    resultDiv.innerHTML = html;
+                    NotificationManager.showSuccess(
+                        "Request sent successfully!",
+                    );
+                } catch (error) {
+                    const html = `
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <h4 class="font-semibold text-gray-800">Error</h4>
+                                <span class="text-sm px-2 py-1 rounded bg-red-100 text-red-800">Failed</span>
+                            </div>
+                            <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                                <p class="text-red-800">${error.message}</p>
+                            </div>
+                            <div class="text-xs text-gray-500">
+                                <div>URL: ${method} ${url}</div>
+                                <div>Time: ${new Date().toLocaleTimeString()}</div>
+                            </div>
+                        </div>
+                    `;
+                    resultDiv.innerHTML = html;
+                    NotificationManager.showError("Request failed!");
+                }
+            }
+
+            // Helper Functions
+            function getCategoryIcon(category) {
+                const icons = {
+                    Nutrisi: "apple-alt",
+                    Olahraga: "running",
+                    Tidur: "bed",
+                    Mental: "brain",
+                };
+                return icons[category] || "info-circle";
+            }
+
+            function getCategoryColor(category) {
+                const colors = {
+                    Nutrisi: "green",
+                    Olahraga: "blue",
+                    Tidur: "purple",
+                    Mental: "yellow",
+                };
+                return colors[category] || "gray";
+            }
+        </script>
+    </body>
+</html>
