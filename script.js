@@ -3,25 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const menuBtn = document.getElementById("menu-btn");
   const mobileMenu = document.getElementById("mobile-menu");
   const menuIcon = document.getElementById("menu-icon");
-  let isAnimating = false;
-
   function showMenu() {
-    if (isAnimating) {
-      console.log("Menu animation in progress, ignoring show request");
-      return;
-    }
-    console.log("Showing menu...");
-    isAnimating = true;
-
     mobileMenu.classList.remove("hidden");
-    // Force reflow to ensure hidden class removal is applied
-    mobileMenu.offsetHeight;
-
-    setTimeout(() => {
-      mobileMenu.classList.add("show");
-      isAnimating = false;
-      console.log("Menu shown successfully");
-    }, 10);
+    mobileMenu.classList.add("show");
 
     if (menuIcon) {
       menuIcon.classList.remove("fa-bars");
@@ -30,20 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function hideMenu() {
-    if (isAnimating) {
-      console.log("Menu animation in progress, ignoring hide request");
-      return;
-    }
-    console.log("Hiding menu...");
-    isAnimating = true;
-
     mobileMenu.classList.remove("show");
-
-    setTimeout(() => {
-      mobileMenu.classList.add("hidden");
-      isAnimating = false;
-      console.log("Menu hidden successfully");
-    }, 400);
+    mobileMenu.classList.add("hidden");
 
     if (menuIcon) {
       menuIcon.classList.remove("fa-times");
@@ -52,11 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function isMenuVisible() {
-    return (
-      mobileMenu.classList.contains("show") ||
-      (!mobileMenu.classList.contains("hidden") &&
-        !mobileMenu.classList.contains("show"))
-    );
+    return mobileMenu.classList.contains("show");
   }
 
   if (menuBtn && mobileMenu) {
@@ -64,8 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
 
       const menuVisible = isMenuVisible();
-      console.log("Menu button clicked. Menu visible:", menuVisible);
-      console.log("Current classes:", mobileMenu.className);
 
       if (menuVisible) {
         hideMenu();
@@ -92,7 +58,6 @@ document.addEventListener("DOMContentLoaded", function () {
           menuIcon.classList.remove("fa-times");
           menuIcon.classList.add("fa-bars");
         }
-        isAnimating = false;
       }
     });
   }

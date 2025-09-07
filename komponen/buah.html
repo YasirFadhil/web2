@@ -25,67 +25,133 @@
             rel="stylesheet"
             type="text/css"
         />
+        <link rel="stylesheet" href="/styles.css" />
     </head>
-    <body class="bg-gradient-to-b from-red-50 to-white">
+    <body class="bg-gradient-to-b from-red-50 to-white pt-20">
         <!-- Navigation Bar -->
-        <div class="navbar bg-red-600 text-white shadow-lg">
-            <div class="navbar-start">
-                <a
-                    href="../index.html"
-                    class="btn btn-ghost normal-case text-xl"
-                >
-                    <i class="fas fa-arrow-left mr-2"></i>
-                    Kembali
-                </a>
-            </div>
-            <div class="navbar-center">
-                <h1 class="text-xl font-bold">Buah-buahan</h1>
-            </div>
-            <div class="navbar-end">
-                <div class="dropdown dropdown-end">
-                    <div tabindex="0" role="button" class="btn btn-ghost">
-                        <i class="fas fa-bars"></i>
+        <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+            <div class="container mx-auto px-4">
+                <!-- mobile navigation -->
+                <div class="md:hidden py-4">
+                    <div class="flex justify-between items-center">
+                        <div class="text-2xl font-bold text-green-600">
+                            <img
+                                src="../assets/logo(hd).png"
+                                alt="Logo"
+                                class="inline-block h-12 w-auto mr-2"
+                            />
+                            <!--Sehat Bersama-->
+                        </div>
+                        <button
+                            id="menu-btn"
+                            class="text-gray-700 hover:text-green-600 focus:outline-none transition-colors duration-200"
+                        >
+                            <i id="menu-icon" class="fas fa-bars text-xl"></i>
+                        </button>
                     </div>
-                    <ul
-                        tabindex="0"
-                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-gray-800"
+                    <div
+                        id="mobile-menu"
+                        class="hidden mt-4 space-y-1 border-t border-gray-200 pt-4"
                     >
-                        <li>
-                            <a href="../index.html" class="text-gray-800"
-                                >Beranda</a
-                            >
-                        </li>
-                        <li>
-                            <a href="pokok.html" class="text-gray-800"
-                                >Makanan Pokok</a
-                            >
-                        </li>
-                        <li>
-                            <a href="sayur.html" class="text-gray-800"
-                                >Sayur Mayur</a
-                            >
-                        </li>
-                        <li>
-                            <a href="lauk.html" class="text-gray-800"
-                                >Lauk Pauk</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="buah.html"
-                                class="text-gray-800 font-semibold bg-red-50"
-                                >Buah-buahan</a
-                            >
-                        </li>
-                        <li>
-                            <a href="susu.html" class="text-gray-800"
-                                >Minuman Susu</a
-                            >
-                        </li>
-                    </ul>
+                        <a
+                            href="../index.html"
+                            class="flex items-center text-gray-700 hover:text-green-600 hover:bg-green-50 py-3 px-2 rounded-md transition-all duration-200"
+                            ><i class="fas fa-home w-5 text-center mr-3"></i>
+                            Beranda</a
+                        >
+                        <a
+                            href="pokok.html"
+                            class="flex items-center text-gray-700 hover:text-green-600 hover:bg-green-50 py-3 px-2 rounded-md transition-all duration-200"
+                            ><i
+                                class="fas fa-utensils w-5 text-center mr-3"
+                            ></i>
+                            Makanan Pokok</a
+                        >
+                        <a
+                            href="sayuran.html"
+                            class="flex items-center text-gray-700 hover:text-green-600 hover:bg-green-50 py-3 px-2 rounded-md transition-all duration-200"
+                            ><i class="fas fa-leaf w-5 text-center mr-3"></i>
+                            Sayuran</a
+                        >
+                        <a
+                            href="lauk.html"
+                            class="flex items-center text-gray-700 hover:text-green-600 hover:bg-green-50 py-3 px-2 rounded-md transition-all duration-200"
+                            ><i class="fas fa-egg w-5 text-center mr-3"></i>
+                            Lauk-Pauk</a
+                        >
+                        <a
+                            href="buah.html"
+                            class="flex items-center text-green-600 bg-green-50 py-3 px-2 rounded-md font-semibold"
+                            ><i
+                                class="fas fa-apple-whole w-5 text-center mr-3"
+                            ></i>
+                            Buah-Buahan</a
+                        >
+                        <a
+                            href="susu.html"
+                            class="flex items-center text-gray-700 hover:text-green-600 hover:bg-green-50 py-3 px-2 rounded-md transition-all duration-200"
+                            ><i
+                                class="fas fa-bottle-water w-5 text-center mr-3"
+                            ></i>
+                            Susu</a
+                        >
+                    </div>
+                </div>
+                <!-- desktop navigation -->
+                <div class="hidden md:flex py-4 justify-between items-center">
+                    <div class="text-2xl font-bold text-green-600">
+                        <img
+                            src="../assets/logo(no_text).jpg"
+                            alt="Logo"
+                            class="inline-block h-12 w-auto mr-2"
+                        />
+                        Sehat Bersama
+                    </div>
+                    <div class="space-x-6">
+                        <a
+                            href="../index.html"
+                            class="text-gray-700 hover:text-green-600 transition-colors duration-200"
+                            ><i class="fas fa-home mr-1"></i> Beranda</a
+                        >
+                        <a
+                            href="pokok.html"
+                            class="text-gray-700 hover:text-green-600 transition-colors duration-200"
+                            ><i class="fas fa-utensils mr-1"></i> Makanan
+                            Pokok</a
+                        >
+                        <a
+                            href="sayuran.html"
+                            class="text-gray-700 hover:text-green-600 transition-colors duration-200"
+                            ><i class="fas fa-leaf mr-1"></i> Sayuran</a
+                        >
+                        <a
+                            href="lauk.html"
+                            class="text-gray-700 hover:text-green-600 transition-colors duration-200"
+                            ><i class="fas fa-egg mr-1"></i> Lauk-Pauk</a
+                        >
+                        <a
+                            href="buah.html"
+                            class="text-green-600 font-semibold border-b-2 border-green-600 pb-1"
+                            ><i class="fas fa-apple-whole mr-1"></i>
+                            Buah-Buahan</a
+                        >
+                        <a
+                            href="susu.html"
+                            class="text-gray-700 hover:text-green-600 transition-colors duration-200"
+                            ><i class="fas fa-bottle-water mr-1"></i> Susu</a
+                        >
+                    </div>
+                    <div>
+                        <a
+                            href="../quiz-kesehatan.html"
+                            class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 transition-colors duration-200 inline-flex items-center"
+                            ><i class="fas fa-question-circle mr-2"></i> Kuis
+                            Sehat</a
+                        >
+                    </div>
                 </div>
             </div>
-        </div>
+        </nav>
 
         <!-- Hero Section -->
         <div
@@ -508,48 +574,220 @@
         </section>
 
         <!-- Footer -->
-        <footer class="bg-red-800 text-white py-8">
-            <div class="container mx-auto px-4 text-center">
-                <div class="mb-4">
-                    <h3 class="text-2xl font-bold mb-2">4 Sehat 5 Sempurna</h3>
-                    <p class="text-red-200">
-                        Panduan Hidup Sehat untuk Indonesia
-                    </p>
+        <footer class="bg-gray-800 text-white">
+            <div class="container mx-auto px-4 py-12">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <!-- Brand Section -->
+                    <div class="col-span-1">
+                        <h3 class="text-2xl font-bold text-green-400 mb-4">
+                            <img
+                                src="../assets/logo(no_txt).png"
+                                alt="Logo"
+                                class="inline-block h-12 w-auto mr-2"
+                            />
+                            Sehat Bersama
+                        </h3>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                            Platform edukasi kesehatan yang memberikan informasi
+                            lengkap tentang pola hidup sehat 4 Sehat 5 Sempurna
+                            untuk menciptakan masyarakat Indonesia yang lebih
+                            sehat.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a
+                                href="#"
+                                class="text-gray-300 hover:text-green-400 transition-colors duration-200"
+                            >
+                                <i class="fab fa-facebook-f text-lg"></i>
+                            </a>
+                            <a
+                                href="#"
+                                class="text-gray-300 hover:text-green-400 transition-colors duration-200"
+                            >
+                                <i class="fab fa-twitter text-lg"></i>
+                            </a>
+                            <a
+                                href="#"
+                                class="text-gray-300 hover:text-green-400 transition-colors duration-200"
+                            >
+                                <i class="fab fa-instagram text-lg"></i>
+                            </a>
+                            <a
+                                href="#"
+                                class="text-gray-300 hover:text-green-400 transition-colors duration-200"
+                            >
+                                <i class="fab fa-youtube text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Menu Navigasi -->
+                    <div class="col-span-1">
+                        <h4 class="text-lg font-semibold text-green-400 mb-4">
+                            Menu Utama
+                        </h4>
+                        <ul class="space-y-2">
+                            <li>
+                                <a
+                                    href="../index.html"
+                                    class="text-gray-300 hover:text-green-400 transition-colors duration-200 text-sm"
+                                >
+                                    <i class="fas fa-home mr-2"></i>Beranda
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="../index.html#pengertian"
+                                    class="text-gray-300 hover:text-green-400 transition-colors duration-200 text-sm"
+                                >
+                                    <i class="fas fa-info-circle mr-2"></i
+                                    >Pengertian
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="../index.html#services"
+                                    class="text-gray-300 hover:text-green-400 transition-colors duration-200 text-sm"
+                                >
+                                    <i class="fas fa-utensils mr-2"></i>Komponen
+                                    Makanan
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="../index.html#manfaat"
+                                    class="text-gray-300 hover:text-green-400 transition-colors duration-200 text-sm"
+                                >
+                                    <i class="fas fa-heart mr-2"></i>Manfaat
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Komponen 4 Sehat 5 Sempurna -->
+                    <div class="col-span-1">
+                        <h4 class="text-lg font-semibold text-green-400 mb-4">
+                            Komponen Sehat
+                        </h4>
+                        <ul class="space-y-2">
+                            <li>
+                                <a
+                                    href="pokok.html"
+                                    class="text-gray-300 hover:text-green-400 transition-colors duration-200 text-sm"
+                                >
+                                    <i class="fas fa-bread-slice mr-2"></i
+                                    >Makanan Pokok
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="sayuran.html"
+                                    class="text-gray-300 hover:text-green-400 transition-colors duration-200 text-sm"
+                                >
+                                    <i class="fas fa-leaf mr-2"></i>Sayuran
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="lauk.html"
+                                    class="text-gray-300 hover:text-green-400 transition-colors duration-200 text-sm"
+                                >
+                                    <i class="fas fa-fish mr-2"></i>Lauk-Pauk
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="buah.html"
+                                    class="text-green-400 font-semibold text-sm"
+                                >
+                                    <i class="fas fa-apple-alt mr-2"></i
+                                    >Buah-Buahan
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="susu.html"
+                                    class="text-gray-300 hover:text-green-400 transition-colors duration-200 text-sm"
+                                >
+                                    <i class="fas fa-glass-whiskey mr-2"></i
+                                    >Susu
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Kontak & Info -->
+                    <div class="col-span-1">
+                        <h4 class="text-lg font-semibold text-green-400 mb-4">
+                            Hubungi Kami
+                        </h4>
+                        <div class="space-y-3">
+                            <div class="flex items-start">
+                                <i
+                                    class="fas fa-map-marker-alt text-green-400 mt-1 mr-3"
+                                ></i>
+                                <p class="text-gray-300 text-sm">
+                                    Jl. Wahidin Sudiro Husodo No.22, Bramen,
+                                    Sekarsuli, Kec. Klaten Utara, Kabupaten
+                                    Klaten<br />
+                                    Jawa Tengah, Indonesia 57432
+                                </p>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-phone text-green-400 mr-3"></i>
+                                <p class="text-gray-300 text-sm">
+                                    +62 21 1234 5678
+                                </p>
+                            </div>
+                            <div class="flex items-center">
+                                <i
+                                    class="fas fa-envelope text-green-400 mr-3"
+                                ></i>
+                                <p class="text-gray-300 text-sm">
+                                    info@sehatbersama.id
+                                </p>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-clock text-green-400 mr-3"></i>
+                                <p class="text-gray-300 text-sm">24/7 Online</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex justify-center space-x-6 mb-4">
-                    <a
-                        href="../index.html"
-                        class="hover:text-red-300 transition-colors"
-                        >Beranda</a
-                    >
-                    <a
-                        href="pokok.html"
-                        class="hover:text-red-300 transition-colors"
-                        >Makanan Pokok</a
-                    >
-                    <a
-                        href="sayur.html"
-                        class="hover:text-red-300 transition-colors"
-                        >Sayur Mayur</a
-                    >
-                    <a
-                        href="lauk.html"
-                        class="hover:text-red-300 transition-colors"
-                        >Lauk Pauk</a
-                    >
-                    <a href="buah.html" class="text-red-300 font-semibold"
-                        >Buah-buahan</a
-                    >
-                    <a
-                        href="susu.html"
-                        class="hover:text-red-300 transition-colors"
-                        >Minuman Susu</a
-                    >
+
+                <!-- Divider -->
+                <hr class="border-gray-600 my-8" />
+
+                <!-- Copyright Section -->
+                <div
+                    class="flex flex-col md:flex-row justify-between items-center"
+                >
+                    <div class="text-gray-300 text-sm mb-4 md:mb-0">
+                        <p>&copy; 2025 Sehat Bersama. All rights reserved.</p>
+                    </div>
+                    <div class="flex space-x-6 text-sm">
+                        <a
+                            href="#"
+                            class="text-gray-300 hover:text-green-400 transition-colors duration-200"
+                        >
+                            Kebijakan Privasi
+                        </a>
+                        <a
+                            href="#"
+                            class="text-gray-300 hover:text-green-400 transition-colors duration-200"
+                        >
+                            Syarat & Ketentuan
+                        </a>
+                        <a
+                            href="#"
+                            class="text-gray-300 hover:text-green-400 transition-colors duration-200"
+                        >
+                            FAQ
+                        </a>
+                    </div>
                 </div>
-                <p class="text-red-300 text-sm">
-                    © 2024 4 Sehat 5 Sempurna. All rights reserved.
-                </p>
             </div>
         </footer>
+        <script src="/script.js"></script>
     </body>
 </html>
