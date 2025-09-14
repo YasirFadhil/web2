@@ -16,108 +16,119 @@
         />
     </head>
     <body class="bg-gray-100 font-poppins">
-        <!-- navigation -->
-        <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
-            <div class="container mx-auto px-4">
-                <!-- mobile navigation -->
-                <div class="md:hidden py-4">
-                    <div class="flex justify-between items-center">
-                        <div class="text-2xl font-bold text-green-600">
-                            <img
-                                src="assets/logo(hd).png"
-                                alt="Logo"
-                                class="inline-block h-12 w-auto mr-2"
-                            />
-                            <!--Sehat Bersama-->
+        <!-- Navigation Bar -->
+                <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+                    <div class="container mx-auto px-4">
+                        <!-- mobile navigation -->
+                        <div class="md:hidden py-4">
+                            <div class="flex justify-between items-center">
+                                <div class="text-2xl font-bold text-green-600">
+                                    <img
+                                        src="../assets/logo(hd).png"
+                                        alt="Logo"
+                                        class="inline-block h-12 w-auto mr-2"
+                                    />
+                                    <!--Sehat Bersama-->
+                                </div>
+                                <button
+                                    id="menu-btn"
+                                    class="text-gray-700 hover:text-green-600 focus:outline-none transition-colors duration-200"
+                                >
+                                    <i id="menu-icon" class="fas fa-bars text-xl"></i>
+                                </button>
+                            </div>
+                            <div
+                                id="mobile-menu"
+                                class="hidden mt-4 space-y-1 border-t border-gray-200 pt-4"
+                            >
+                                <a
+                                    href="#"
+                                    class="flex items-center text-gray-700 hover:text-green-600 hover:bg-green-50 py-3 px-2 rounded-md transition-all duration-200"
+                                    ><i class="fas fa-home w-5 text-center mr-3"></i>
+                                    Beranda</a
+                                >
+                                <a
+                                    href="komponen/pokok.html"
+                                    class="flex items-center text-gray-700 hover:text-green-600 hover:bg-green-50 py-3 px-2 rounded-md transition-all duration-200"
+                                    ><i
+                                        class="fas fa-utensils w-5 text-center mr-3"
+                                    ></i>
+                                    Makanan Pokok</a
+                                >
+                                <a
+                                    href="komponen/sayuran.html"
+                                    class="flex items-center text-gray-700 hover:text-green-600 hover:bg-green-50 py-3 px-2 rounded-md transition-all duration-200"
+                                    ><i class="fas fa-leaf w-5 text-center mr-3"></i>
+                                    Sayuran</a
+                                >
+                                <a
+                                    href="komponen/lauk.html"
+                                    class="flex items-center text-green-600 bg-green-50 py-3 px-2 rounded-md font-semibold"
+                                    ><i class="fas fa-egg w-5 text-center mr-3"></i>
+                                    Lauk-Pauk</a
+                                >
+                                <a
+                                    href="komponen/buah.html"
+                                    class="flex items-center text-gray-700 hover:text-green-600 hover:bg-green-50 py-3 px-2 rounded-md transition-all duration-200"
+                                    ><i
+                                        class="fas fa-apple-whole w-5 text-center mr-3"
+                                    ></i>
+                                    Buah-Buahan</a
+                                >
+                                <a
+                                    href="komponen/susu.html"
+                                    class="flex items-center text-gray-700 hover:text-green-600 hover:bg-green-50 py-3 px-2 rounded-md transition-all duration-200"
+                                    ><i
+                                        class="fas fa-bottle-water w-5 text-center mr-3"
+                                    ></i>
+                                    Susu</a
+                                >
+                            </div>
                         </div>
-                        <button
-                            id="menu-btn"
-                            class="text-gray-700 hover:text-green-600 focus:outline-none transition-colors duration-200"
-                        >
-                            <i id="menu-icon" class="fas fa-bars text-xl"></i>
-                        </button>
-                    </div>
-                    <div
-                        id="mobile-menu"
-                        class="hidden mt-4 space-y-1 border-t border-gray-200 pt-4"
-                    >
-                        <a
-                            href="komponen/pokok.html"
-                            class="flex items-center text-gray-700 hover:text-green-600 hover:bg-green-50 py-3 px-2 rounded-md transition-all duration-200"
-                            ><i
-                                class="fas fa-utensils w-5 text-center mr-3"
-                            ></i>
-                            Makanan Pokok</a
-                        >
-                        <a
-                            href="komponen/sayuran.html"
-                            class="flex items-center text-gray-700 hover:text-green-600 hover:bg-green-50 py-3 px-2 rounded-md transition-all duration-200"
-                            ><i class="fas fa-leaf w-5 text-center mr-3"></i>
-                            Sayuran</a
-                        >
-                        <a
-                            href="komponen/lauk.html"
-                            class="flex items-center text-gray-700 hover:text-green-600 hover:bg-green-50 py-3 px-2 rounded-md transition-all duration-200"
-                            ><i class="fas fa-egg w-5 text-center mr-3"></i>
-                            Lauk-Pauk</a
-                        >
-                        <a
-                            href="komponen/buah.html"
-                            class="flex items-center text-gray-700 hover:text-green-600 hover:bg-green-50 py-3 px-2 rounded-md transition-all duration-200"
-                            ><i
-                                class="fas fa-apple-whole w-5 text-center mr-3"
-                            ></i>
-                            Buah-Buahan</a
-                        >
-                        <a
-                            href="komponen/susu.html"
-                            class="flex items-center text-gray-700 hover:text-green-600 hover:bg-green-50 py-3 px-2 rounded-md transition-all duration-200"
-                            ><i
-                                class="fas fa-bottle-water w-5 text-center mr-3"
-                            ></i>
-                            Susu</a
-                        >
-                    </div>
-                </div>
-                <!-- desktop navigation -->
-                <div class="hidden md:flex py-4 justify-between items-center">
-                    <div class="text-2xl font-bold text-green-600">
-                        <img
-                            src="assets/logo(no_txt).png"
-                            alt="Logo"
-                            class="inline-block h-12 w-auto mr-2"
-                        />
-                        Sehat Bersama
-                    </div>
-                    <div class="space-x-6">
-                        <a
-                            href="komponen/pokok.html"
-                            class="text-gray-700 hover:text-green-600 transition-colors duration-200"
-                            ><i class="fas fa-utensils mr-1"></i> Makanan
-                            Pokok</a
-                        >
-                        <a
-                            href="komponen/sayuran.html"
-                            class="text-gray-700 hover:text-green-600 transition-colors duration-200"
-                            ><i class="fas fa-leaf mr-1"></i> Sayuran</a
-                        >
-                        <a
-                            href="komponen/lauk.html"
-                            class="text-gray-700 hover:text-green-600 transition-colors duration-200"
-                            ><i class="fas fa-egg mr-1"></i> Lauk-Pauk</a
-                        >
-                        <a
-                            href="komponen/buah.html"
-                            class="text-gray-700 hover:text-green-600 transition-colors duration-200"
-                            ><i class="fas fa-apple-whole mr-1"></i>
-                            Buah-Buahan</a
-                        >
-                        <a
-                            href="komponen/susu.html"
-                            class="text-gray-700 hover:text-green-600 transition-colors duration-200"
-                            ><i class="fas fa-bottle-water mr-1"></i> Susu</a
-                        >
-                    </div>
+                        <!-- desktop navigation -->
+                        <div class="hidden md:flex py-4 justify-between items-center">
+                            <div class="text-2xl font-bold text-green-600">
+                                <img
+                                    src="../assets/logo(no_txt).png"
+                                    alt="Logo"
+                                    class="inline-block h-12 w-auto mr-2"
+                                />
+                                Sehat Bersama
+                            </div>
+                            <div class="space-x-6">
+                                <a
+                                    href="#"
+                                    class="text-green-600 font-semibold border-b-2 border-green-600 pb-1"
+                                    ><i class="fas fa-home mr-1"></i> Beranda</a
+                                >
+                                <a
+                                    href="komponen/pokok.html"
+                                    class="text-gray-700 hover:text-green-600 transition-colors duration-200"
+                                    ><i class="fas fa-utensils mr-1"></i> Makanan
+                                    Pokok</a
+                                >
+                                <a
+                                    href="komponen/sayuran.html"
+                                    class="text-gray-700 hover:text-green-600 transition-colors duration-200"
+                                    ><i class="fas fa-leaf mr-1"></i> Sayuran</a
+                                >
+                                <a
+                                    href="komponen/lauk.html"
+                                    class="text-gray-700 hover:text-green-600 transition-colors duration-200"
+                                    ><i class="fas fa-egg mr-1"></i> Lauk-Pauk</a
+                                >
+                                <a
+                                    href="komponen/buah.html"
+                                    class="text-gray-700 hover:text-green-600 transition-colors duration-200"
+                                    ><i class="fas fa-apple-whole mr-1"></i>
+                                    Buah-Buahan</a
+                                >
+                                <a
+                                    href="komponen/susu.html"
+                                    class="text-gray-700 hover:text-green-600 transition-colors duration-200"
+                                    ><i class="fas fa-bottle-water mr-1"></i> Susu</a
+                                >
+                            </div>
                 <div>
                     <a
                         href="#quiz"
