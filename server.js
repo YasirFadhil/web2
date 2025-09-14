@@ -8,7 +8,7 @@ const fs = require("fs");
 require("dotenv").config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 // Middleware
 app.use(
@@ -399,7 +399,20 @@ app.get("/api/health", (req, res) => {
 });
 
 // 404 handler
+//app.get("*", (req, res) => {
+//  res.status(404).sendFile(path.join(__dirname, "index.html"));
+//});
+
 app.get("*", (req, res) => {
+  // Operasi berat: perulangan besar
+  let x = 0;
+  for (let i = 0; i < 1e8; i++) {
+    x += i;
+  }
+
+  // Kalau mau lebih ekstrim, bisa tambah baca file besar (hati-hati!)
+  // const data = fs.readFileSync("index.html", "utf-8");
+
   res.status(404).sendFile(path.join(__dirname, "index.html"));
 });
 
@@ -422,6 +435,7 @@ app.listen(PORT, () => {
 🚀 Server berjalan pada port ${PORT}
 📱 Local: http://localhost:${PORT}
 🌐 Network: http://0.0.0.0:${PORT}
+💻 Other: http://192.168.1.9:${PORT}
 🏥 Health Quiz API tersedia di /api/quiz
 📊 Health Tips API tersedia di /api/health/tips
 🧮 BMI Calculator API tersedia di /api/health/bmi
