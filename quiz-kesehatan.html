@@ -55,9 +55,13 @@
                 },
             };
         </script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body
-        class="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-100 min-h-screen"
+        class="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-100 min-h-screen font-poppins"
     >
         <!-- Navigation -->
         <nav
@@ -459,9 +463,10 @@
                 </div>
             </div>
         </div>
+    </body>
 
-        <!-- Footer -->
-        <!--<footer class="bg-gray-900 text-white py-8 mt-16">
+    <!-- Footer -->
+    <!--<footer class="bg-gray-900 text-white py-8 mt-16">
             <div class="max-w-4xl mx-auto px-4 text-center">
                 <p class="text-gray-400">
                     &copy; 2024 SehatKu. Quiz Kesehatan untuk Gaya Hidup Lebih
@@ -469,283 +474,499 @@
                 </p>
             </div>
         </footer>-->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Brand Section -->
+                <div class="col-span-1">
+                    <h3 class="text-2xl font-bold text-green-400 mb-4">
+                        <img
+                            src="assets/logo(no_txt).png"
+                            alt="Logo"
+                            class="inline-block h-12 w-auto mr-2"
+                        />
+                        Sehat Bersama
+                    </h3>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                        Platform edukasi kesehatan yang memberikan informasi
+                        lengkap tentang pola hidup sehat 4 Sehat 5 Sempurna
+                        untuk menciptakan masyarakat Indonesia yang lebih sehat.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a
+                            target="_blank"
+                            href="https://web.facebook.com/profile.php?id=61550868705175"
+                            class="text-gray-300 hover:text-green-400 transition-colors duration-200"
+                        >
+                            <i class="fab fa-facebook-f text-lg"></i>
+                        </a>
+                        <a
+                            target="_blank"
+                            href="https://x.com/elonmusk"
+                            class="text-gray-300 hover:text-green-400 transition-colors duration-200"
+                        >
+                            <i class="fab fa-x-twitter text-lg"></i>
+                        </a>
+                        <a
+                            target="_blank"
+                            href="https://www.instagram.com/rifkylii?igsh=dHh6MnFodWhuaGpw/"
+                            class="text-gray-300 hover:text-green-400 transition-colors duration-200"
+                        >
+                            <i class="fab fa-instagram text-lg"></i>
+                        </a>
+                        <a
+                            target="_blank"
+                            href="https://www.youtube.com/@MrBeast"
+                            class="text-gray-300 hover:text-green-400 transition-colors duration-200"
+                        >
+                            <i class="fab fa-youtube text-lg"></i>
+                        </a>
+                    </div>
+                </div>
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                // Quiz Data
-                const quizData = [
-                    {
-                        question:
-                            "Berapa banyak air yang sebaiknya diminum orang dewasa dalam sehari?",
-                        options: [
-                            "4-5 gelas",
-                            "6-7 gelas",
-                            "8-10 gelas",
-                            "12-15 gelas",
-                        ],
-                        correct: 2,
-                        explanation:
-                            "Orang dewasa sebaiknya minum 8-10 gelas air atau sekitar 2-2.5 liter per hari untuk menjaga hidrasi yang optimal.",
-                    },
-                    {
-                        question:
-                            "Makanan mana yang paling baik untuk kesehatan jantung?",
-                        options: [
-                            "Gorengan",
-                            "Ikan salmon",
-                            "Makanan cepat saji",
-                            "Makanan manis",
-                        ],
-                        correct: 1,
-                        explanation:
-                            "Ikan salmon kaya akan omega-3 yang sangat baik untuk kesehatan jantung dan dapat mengurangi risiko penyakit kardiovaskular.",
-                    },
-                    {
-                        question:
-                            "Berapa lama waktu tidur ideal untuk orang dewasa?",
-                        options: ["4-5 jam", "6-7 jam", "7-9 jam", "10-12 jam"],
-                        correct: 2,
-                        explanation:
-                            "Orang dewasa membutuhkan 7-9 jam tidur setiap malam untuk fungsi tubuh yang optimal dan pemulihan yang baik.",
-                    },
-                    {
-                        question:
-                            "Vitamin mana yang diproduksi tubuh saat terkena sinar matahari?",
-                        options: [
-                            "Vitamin A",
-                            "Vitamin B",
-                            "Vitamin C",
-                            "Vitamin D",
-                        ],
-                        correct: 3,
-                        explanation:
-                            "Vitamin D diproduksi oleh kulit saat terpapar sinar ultraviolet B dari matahari, penting untuk kesehatan tulang dan sistem imun.",
-                    },
-                    {
-                        question:
-                            "Berapa kali sebaiknya menggosok gigi dalam sehari?",
-                        options: ["1 kali", "2 kali", "3 kali", "4 kali"],
-                        correct: 1,
-                        explanation:
-                            "Menggosok gigi minimal 2 kali sehari (pagi dan malam) adalah standar untuk menjaga kesehatan mulut dan gigi.",
-                    },
-                    {
-                        question:
-                            "Olahraga mana yang terbaik untuk kesehatan jantung?",
-                        options: [
-                            "Angkat beban",
-                            "Lari/jogging",
-                            "Yoga",
-                            "Bersepeda",
-                        ],
-                        correct: 1,
-                        explanation:
-                            "Lari atau jogging adalah olahraga kardio yang sangat efektif untuk memperkuat jantung dan meningkatkan sirkulasi darah.",
-                    },
-                    {
-                        question:
-                            "Berapa BMI (Body Mass Index) yang dianggap normal?",
-                        options: ["15-18", "18.5-24.9", "25-29", "30-35"],
-                        correct: 1,
-                        explanation:
-                            "BMI normal berkisar antara 18.5-24.9. BMI ini menunjukkan berat badan yang sehat sesuai dengan tinggi badan.",
-                    },
-                    {
-                        question:
-                            "Makanan mana yang mengandung probiotik alami?",
-                        options: ["Roti putih", "Yogurt", "Keripik", "Soda"],
-                        correct: 1,
-                        explanation:
-                            "Yogurt mengandung probiotik alami yang baik untuk kesehatan pencernaan dan sistem imun tubuh.",
-                    },
-                    {
-                        question:
-                            "Berapa kali sebaiknya berolahraga dalam seminggu?",
-                        options: [
-                            "1-2 kali",
-                            "3-5 kali",
-                            "6-7 kali",
-                            "Setiap hari",
-                        ],
-                        correct: 1,
-                        explanation:
-                            "Berolahraga 3-5 kali seminggu dengan durasi 30-60 menit per sesi adalah ideal untuk menjaga kebugaran tubuh.",
-                    },
-                    {
-                        question: "Apa penyebab utama penyakit jantung?",
-                        options: [
-                            "Kurang tidur",
-                            "Merokok dan kolesterol tinggi",
-                            "Terlalu banyak minum air",
-                            "Olahraga berlebihan",
-                        ],
-                        correct: 1,
-                        explanation:
-                            "Merokok dan kolesterol tinggi adalah faktor risiko utama penyakit jantung, bersama dengan hipertensi dan diabetes.",
-                    },
-                    {
-                        question:
-                            "Berapa persen tubuh manusia yang terdiri dari air?",
-                        options: ["40-50%", "50-60%", "60-70%", "80-90%"],
-                        correct: 2,
-                        explanation:
-                            "Tubuh manusia dewasa terdiri dari sekitar 60-70% air, tergantung pada usia, jenis kelamin, dan komposisi tubuh.",
-                    },
-                    {
-                        question:
-                            "Makanan mana yang mengandung antioksidan tinggi?",
-                        options: [
-                            "Blueberry",
-                            "Keripik kentang",
-                            "Permen",
-                            "Roti putih",
-                        ],
-                        correct: 0,
-                        explanation:
-                            "Blueberry sangat kaya antioksidan yang membantu melawan radikal bebas dan mencegah kerusakan sel.",
-                    },
-                    {
-                        question:
-                            "Berapa target langkah kaki per hari untuk hidup sehat?",
-                        options: [
-                            "5.000 langkah",
-                            "8.000 langkah",
-                            "10.000 langkah",
-                            "15.000 langkah",
-                        ],
-                        correct: 2,
-                        explanation:
-                            "Target 10.000 langkah per hari adalah rekomendasi umum untuk menjaga kesehatan dan aktivitas fisik yang cukup.",
-                    },
-                    {
-                        question: "Apa manfaat utama meditasi bagi kesehatan?",
-                        options: [
-                            "Menurunkan berat badan",
-                            "Mengurangi stress",
-                            "Meningkatkan nafsu makan",
-                            "Mempercepat pencernaan",
-                        ],
-                        correct: 1,
-                        explanation:
-                            "Meditasi terbukti efektif mengurangi stress, menurunkan tekanan darah, dan meningkatkan kesejahteraan mental.",
-                    },
-                    {
-                        question: "Berapa suhu tubuh normal manusia?",
-                        options: ["35-36°C", "36-37°C", "37-38°C", "38-39°C"],
-                        correct: 1,
-                        explanation:
-                            "Suhu tubuh normal manusia berkisar antara 36-37°C (96.8-98.6°F), dengan variasi kecil tergantung individu dan waktu.",
-                    },
-                ];
+                <!-- Menu Navigasi -->
+                <div class="col-span-1">
+                    <h4 class="text-lg font-semibold text-green-400 mb-4">
+                        Menu Utama
+                    </h4>
+                    <ul class="space-y-2">
+                        <li>
+                            <a
+                                href="index.html"
+                                class="text-gray-300 hover:text-green-400 transition-colors duration-200 text-sm"
+                            >
+                                <i class="fas fa-home mr-2"></i>Beranda
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="index.html#pengertian"
+                                class="text-gray-300 hover:text-green-400 transition-colors duration-200 text-sm"
+                            >
+                                <i class="fas fa-info-circle mr-2"></i
+                                >Pengertian
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="index.html#services"
+                                class="text-gray-300 hover:text-green-400 transition-colors duration-200 text-sm"
+                            >
+                                <i class="fas fa-utensils mr-2"></i>Komponen
+                                Makanan
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="index.html#manfaat"
+                                class="text-gray-300 hover:text-green-400 transition-colors duration-200 text-sm"
+                            >
+                                <i class="fas fa-heart mr-2"></i>Manfaat
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-                // Quiz State
-                let currentQuestion = 0;
-                let userAnswers = [];
-                let quizActive = false;
-                let shuffledQuizData = [];
+                <!-- Komponen 4 Sehat 5 Sempurna -->
+                <div class="col-span-1">
+                    <h4 class="text-lg font-semibold text-green-400 mb-4">
+                        Komponen Sehat
+                    </h4>
+                    <ul class="space-y-2">
+                        <li>
+                            <a
+                                href="komponen/pokok.html"
+                                class="text-gray-300 hover:text-green-400 transition-colors duration-200 text-sm"
+                            >
+                                <i class="fas fa-bread-slice mr-2"></i>Makanan
+                                Pokok
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="komponen/sayuran.html"
+                                class="text-gray-300 hover:text-green-400 transition-colors duration-200 text-sm"
+                            >
+                                <i class="fas fa-leaf mr-2"></i>Sayuran
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="komponen/lauk.html"
+                                class="text-gray-300 hover:text-green-400 transition-colors duration-200 text-sm"
+                            >
+                                <i class="fas fa-drumstick-bite mr-2"></i
+                                >Lauk-Pauk
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="komponen/buah.html"
+                                class="text-gray-300 hover:text-green-400 transition-colors duration-200 text-sm"
+                            >
+                                <i class="fas fa-apple-alt mr-2"></i>Buah-Buahan
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="komponen/susu.html"
+                                class="text-gray-300 hover:text-green-400 transition-colors duration-200 text-sm"
+                            >
+                                <i class="fas fa-glass-whiskey mr-2"></i>Susu
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-                // DOM Elements
-                const welcomeScreen = document.getElementById("welcome-screen");
-                const progressSection =
-                    document.getElementById("progress-section");
-                const quizSection = document.getElementById("quiz-section");
-                const resultsSection =
-                    document.getElementById("results-section");
-                const reviewSection = document.getElementById("review-section");
+                <!-- Kontak & Info -->
+                <div class="col-span-1">
+                    <h4 class="text-lg font-semibold text-green-400 mb-4">
+                        Hubungi Kami
+                    </h4>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i
+                                class="fas fa-map-marker-alt text-green-400 mt-1 mr-3"
+                            ></i>
+                            <a
+                                href="https://maps.google.com/?q=Jl.+Wahidin+Sudiro+Husodo+No.22,+Bramen,+Sekarsuli,+Klaten+Utara,+Klaten,+Jawa+Tengah+57432"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-gray-300 hover:text-green-400 transition-colors duration-200 text-sm"
+                            >
+                                Jl. Wahidin Sudiro Husodo No.22, Bramen,
+                                Sekarsuli, Kec. Klaten Utara, Kabupaten
+                                Klaten<br />
+                                Jawa Tengah, Indonesia 57432
+                            </a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-green-400 mr-3"></i>
+                            <a
+                                href="https://wa.me/6289528936997"
+                                class="text-gray-300 hover:text-green-400 transition-colors duration-200 text-sm"
+                            >
+                                +62 895-2893-6997
+                            </a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-green-400 mr-3"></i>
+                            <a
+                                href="mailto:MrCroVen0@gmail.com"
+                                class="text-gray-300 hover:text-green-400 transition-colors duration-200 text-sm"
+                            >
+                                MrCroVen0@gmail.com
+                            </a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-green-400 mr-3"></i>
+                            <p class="text-gray-300 text-sm">24/7 Online</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                const startQuizBtn = document.getElementById("start-quiz-btn");
-                const prevBtn = document.getElementById("prev-btn");
-                const nextBtn = document.getElementById("next-btn");
-                const restartQuizBtn =
-                    document.getElementById("restart-quiz-btn");
-                const reviewAnswersBtn =
-                    document.getElementById("review-answers-btn");
-                const backToResultsBtn = document.getElementById(
-                    "back-to-results-btn",
+            <!-- Divider -->
+            <hr class="border-gray-600 my-8" />
+
+            <!-- Copyright Section -->
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-300 text-sm mb-4 md:mb-0">
+                    <p>&copy; 2025 Sehat Bersama. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6 text-sm">
+                    <a
+                        href="#"
+                        class="text-gray-300 hover:text-green-400 transition-colors duration-200"
+                    >
+                        Kebijakan Privasi
+                    </a>
+                    <a
+                        href="#"
+                        class="text-gray-300 hover:text-green-400 transition-colors duration-200"
+                    >
+                        Syarat & Ketentuan
+                    </a>
+                    <a
+                        href="#"
+                        class="text-gray-300 hover:text-green-400 transition-colors duration-200"
+                    >
+                        FAQ
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Quiz Data
+            const quizData = [
+                {
+                    question:
+                        "Berapa banyak air yang sebaiknya diminum orang dewasa dalam sehari?",
+                    options: [
+                        "4-5 gelas",
+                        "6-7 gelas",
+                        "8-10 gelas",
+                        "12-15 gelas",
+                    ],
+                    correct: 2,
+                    explanation:
+                        "Orang dewasa sebaiknya minum 8-10 gelas air atau sekitar 2-2.5 liter per hari untuk menjaga hidrasi yang optimal.",
+                },
+                {
+                    question:
+                        "Makanan mana yang paling baik untuk kesehatan jantung?",
+                    options: [
+                        "Gorengan",
+                        "Ikan salmon",
+                        "Makanan cepat saji",
+                        "Makanan manis",
+                    ],
+                    correct: 1,
+                    explanation:
+                        "Ikan salmon kaya akan omega-3 yang sangat baik untuk kesehatan jantung dan dapat mengurangi risiko penyakit kardiovaskular.",
+                },
+                {
+                    question:
+                        "Berapa lama waktu tidur ideal untuk orang dewasa?",
+                    options: ["4-5 jam", "6-7 jam", "7-9 jam", "10-12 jam"],
+                    correct: 2,
+                    explanation:
+                        "Orang dewasa membutuhkan 7-9 jam tidur setiap malam untuk fungsi tubuh yang optimal dan pemulihan yang baik.",
+                },
+                {
+                    question:
+                        "Vitamin mana yang diproduksi tubuh saat terkena sinar matahari?",
+                    options: [
+                        "Vitamin A",
+                        "Vitamin B",
+                        "Vitamin C",
+                        "Vitamin D",
+                    ],
+                    correct: 3,
+                    explanation:
+                        "Vitamin D diproduksi oleh kulit saat terpapar sinar ultraviolet B dari matahari, penting untuk kesehatan tulang dan sistem imun.",
+                },
+                {
+                    question:
+                        "Berapa kali sebaiknya menggosok gigi dalam sehari?",
+                    options: ["1 kali", "2 kali", "3 kali", "4 kali"],
+                    correct: 1,
+                    explanation:
+                        "Menggosok gigi minimal 2 kali sehari (pagi dan malam) adalah standar untuk menjaga kesehatan mulut dan gigi.",
+                },
+                {
+                    question:
+                        "Olahraga mana yang terbaik untuk kesehatan jantung?",
+                    options: [
+                        "Angkat beban",
+                        "Lari/jogging",
+                        "Yoga",
+                        "Bersepeda",
+                    ],
+                    correct: 1,
+                    explanation:
+                        "Lari atau jogging adalah olahraga kardio yang sangat efektif untuk memperkuat jantung dan meningkatkan sirkulasi darah.",
+                },
+                {
+                    question:
+                        "Berapa BMI (Body Mass Index) yang dianggap normal?",
+                    options: ["15-18", "18.5-24.9", "25-29", "30-35"],
+                    correct: 1,
+                    explanation:
+                        "BMI normal berkisar antara 18.5-24.9. BMI ini menunjukkan berat badan yang sehat sesuai dengan tinggi badan.",
+                },
+                {
+                    question: "Makanan mana yang mengandung probiotik alami?",
+                    options: ["Roti putih", "Yogurt", "Keripik", "Soda"],
+                    correct: 1,
+                    explanation:
+                        "Yogurt mengandung probiotik alami yang baik untuk kesehatan pencernaan dan sistem imun tubuh.",
+                },
+                {
+                    question:
+                        "Berapa kali sebaiknya berolahraga dalam seminggu?",
+                    options: [
+                        "1-2 kali",
+                        "3-5 kali",
+                        "6-7 kali",
+                        "Setiap hari",
+                    ],
+                    correct: 1,
+                    explanation:
+                        "Berolahraga 3-5 kali seminggu dengan durasi 30-60 menit per sesi adalah ideal untuk menjaga kebugaran tubuh.",
+                },
+                {
+                    question: "Apa penyebab utama penyakit jantung?",
+                    options: [
+                        "Kurang tidur",
+                        "Merokok dan kolesterol tinggi",
+                        "Terlalu banyak minum air",
+                        "Olahraga berlebihan",
+                    ],
+                    correct: 1,
+                    explanation:
+                        "Merokok dan kolesterol tinggi adalah faktor risiko utama penyakit jantung, bersama dengan hipertensi dan diabetes.",
+                },
+                {
+                    question:
+                        "Berapa persen tubuh manusia yang terdiri dari air?",
+                    options: ["40-50%", "50-60%", "60-70%", "80-90%"],
+                    correct: 2,
+                    explanation:
+                        "Tubuh manusia dewasa terdiri dari sekitar 60-70% air, tergantung pada usia, jenis kelamin, dan komposisi tubuh.",
+                },
+                {
+                    question:
+                        "Makanan mana yang mengandung antioksidan tinggi?",
+                    options: [
+                        "Blueberry",
+                        "Keripik kentang",
+                        "Permen",
+                        "Roti putih",
+                    ],
+                    correct: 0,
+                    explanation:
+                        "Blueberry sangat kaya antioksidan yang membantu melawan radikal bebas dan mencegah kerusakan sel.",
+                },
+                {
+                    question:
+                        "Berapa target langkah kaki per hari untuk hidup sehat?",
+                    options: [
+                        "5.000 langkah",
+                        "8.000 langkah",
+                        "10.000 langkah",
+                        "15.000 langkah",
+                    ],
+                    correct: 2,
+                    explanation:
+                        "Target 10.000 langkah per hari adalah rekomendasi umum untuk menjaga kesehatan dan aktivitas fisik yang cukup.",
+                },
+                {
+                    question: "Apa manfaat utama meditasi bagi kesehatan?",
+                    options: [
+                        "Menurunkan berat badan",
+                        "Mengurangi stress",
+                        "Meningkatkan nafsu makan",
+                        "Mempercepat pencernaan",
+                    ],
+                    correct: 1,
+                    explanation:
+                        "Meditasi terbukti efektif mengurangi stress, menurunkan tekanan darah, dan meningkatkan kesejahteraan mental.",
+                },
+                {
+                    question: "Berapa suhu tubuh normal manusia?",
+                    options: ["35-36°C", "36-37°C", "37-38°C", "38-39°C"],
+                    correct: 1,
+                    explanation:
+                        "Suhu tubuh normal manusia berkisar antara 36-37°C (96.8-98.6°F), dengan variasi kecil tergantung individu dan waktu.",
+                },
+            ];
+
+            // Quiz State
+            let currentQuestion = 0;
+            let userAnswers = [];
+            let quizActive = false;
+            let shuffledQuizData = [];
+
+            // DOM Elements
+            const welcomeScreen = document.getElementById("welcome-screen");
+            const progressSection = document.getElementById("progress-section");
+            const quizSection = document.getElementById("quiz-section");
+            const resultsSection = document.getElementById("results-section");
+            const reviewSection = document.getElementById("review-section");
+
+            const startQuizBtn = document.getElementById("start-quiz-btn");
+            const prevBtn = document.getElementById("prev-btn");
+            const nextBtn = document.getElementById("next-btn");
+            const restartQuizBtn = document.getElementById("restart-quiz-btn");
+            const reviewAnswersBtn =
+                document.getElementById("review-answers-btn");
+            const backToResultsBtn = document.getElementById(
+                "back-to-results-btn",
+            );
+
+            const currentNum = document.getElementById("current-num");
+            const totalNum = document.getElementById("total-num");
+            const progressPercent = document.getElementById("progress-percent");
+            const progressFill = document.getElementById("progress-fill");
+
+            const questionNumber = document.getElementById("question-number");
+            const questionText = document.getElementById("question-text");
+            const optionsContainer =
+                document.getElementById("options-container");
+            const nextBtnText = document.getElementById("next-btn-text");
+            const nextBtnIcon = document.getElementById("next-btn-icon");
+
+            // Shuffle function
+            function shuffleArray(array) {
+                const shuffled = [...array];
+                for (let i = shuffled.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+                }
+                return shuffled;
+            }
+
+            // Initialize
+            totalNum.textContent = quizData.length;
+
+            // Event Listeners
+            startQuizBtn.addEventListener("click", function () {
+                console.log("Start button clicked!");
+                startQuiz();
+            });
+            prevBtn.addEventListener("click", goToPrevious);
+            nextBtn.addEventListener("click", goToNext);
+            restartQuizBtn.addEventListener("click", restartQuiz);
+            reviewAnswersBtn.addEventListener("click", showReview);
+            backToResultsBtn.addEventListener("click", backToResults);
+
+            // Functions
+            function startQuiz() {
+                console.log("startQuiz function called");
+                console.log("quizData length:", quizData.length);
+
+                quizActive = true;
+                currentQuestion = 0;
+                userAnswers = [];
+
+                // Shuffle questions for this session
+                shuffledQuizData = shuffleArray(quizData);
+                console.log(
+                    "shuffledQuizData length:",
+                    shuffledQuizData.length,
                 );
 
-                const currentNum = document.getElementById("current-num");
-                const totalNum = document.getElementById("total-num");
-                const progressPercent =
-                    document.getElementById("progress-percent");
-                const progressFill = document.getElementById("progress-fill");
+                welcomeScreen.classList.add("hidden");
+                progressSection.classList.remove("hidden");
+                quizSection.classList.remove("hidden");
 
-                const questionNumber =
-                    document.getElementById("question-number");
-                const questionText = document.getElementById("question-text");
-                const optionsContainer =
-                    document.getElementById("options-container");
-                const nextBtnText = document.getElementById("next-btn-text");
-                const nextBtnIcon = document.getElementById("next-btn-icon");
+                showQuestion();
+            }
 
-                // Shuffle function
-                function shuffleArray(array) {
-                    const shuffled = [...array];
-                    for (let i = shuffled.length - 1; i > 0; i--) {
-                        const j = Math.floor(Math.random() * (i + 1));
-                        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-                    }
-                    return shuffled;
-                }
+            function showQuestion() {
+                const question = shuffledQuizData[currentQuestion];
 
-                // Initialize
-                totalNum.textContent = quizData.length;
+                // Update progress
+                const progress =
+                    ((currentQuestion + 1) / shuffledQuizData.length) * 100;
+                currentNum.textContent = currentQuestion + 1;
+                progressPercent.textContent = Math.round(progress);
+                progressFill.style.width = progress + "%";
 
-                // Event Listeners
-                startQuizBtn.addEventListener("click", function () {
-                    console.log("Start button clicked!");
-                    startQuiz();
-                });
-                prevBtn.addEventListener("click", goToPrevious);
-                nextBtn.addEventListener("click", goToNext);
-                restartQuizBtn.addEventListener("click", restartQuiz);
-                reviewAnswersBtn.addEventListener("click", showReview);
-                backToResultsBtn.addEventListener("click", backToResults);
+                // Update question
+                questionNumber.textContent = currentQuestion + 1;
+                questionText.textContent = question.question;
 
-                // Functions
-                function startQuiz() {
-                    console.log("startQuiz function called");
-                    console.log("quizData length:", quizData.length);
-
-                    quizActive = true;
-                    currentQuestion = 0;
-                    userAnswers = [];
-
-                    // Shuffle questions for this session
-                    shuffledQuizData = shuffleArray(quizData);
-                    console.log(
-                        "shuffledQuizData length:",
-                        shuffledQuizData.length,
-                    );
-
-                    welcomeScreen.classList.add("hidden");
-                    progressSection.classList.remove("hidden");
-                    quizSection.classList.remove("hidden");
-
-                    showQuestion();
-                }
-
-                function showQuestion() {
-                    const question = shuffledQuizData[currentQuestion];
-
-                    // Update progress
-                    const progress =
-                        ((currentQuestion + 1) / shuffledQuizData.length) * 100;
-                    currentNum.textContent = currentQuestion + 1;
-                    progressPercent.textContent = Math.round(progress);
-                    progressFill.style.width = progress + "%";
-
-                    // Update question
-                    questionNumber.textContent = currentQuestion + 1;
-                    questionText.textContent = question.question;
-
-                    // Create options
-                    optionsContainer.innerHTML = "";
-                    question.options.forEach((option, index) => {
-                        const optionElement = document.createElement("div");
-                        optionElement.className =
-                            "option-item cursor-pointer p-3 sm:p-4 border-2 border-gray-200 rounded-lg sm:rounded-xl hover:border-blue-300 hover:bg-blue-50 transition-all duration-200 touch-manipulation";
-                        optionElement.innerHTML = `
+                // Create options
+                optionsContainer.innerHTML = "";
+                question.options.forEach((option, index) => {
+                    const optionElement = document.createElement("div");
+                    optionElement.className =
+                        "option-item cursor-pointer p-3 sm:p-4 border-2 border-gray-200 rounded-lg sm:rounded-xl hover:border-blue-300 hover:bg-blue-50 transition-all duration-200 touch-manipulation";
+                    optionElement.innerHTML = `
                         <div class="flex items-center">
                             <div class="w-7 h-7 sm:w-8 sm:h-8 bg-gray-100 rounded-full flex items-center justify-center font-bold text-gray-600 mr-3 sm:mr-4 option-letter text-sm sm:text-base">
                                 ${String.fromCharCode(65 + index)}
@@ -757,179 +978,167 @@
                         </div>
                     `;
 
-                        optionElement.addEventListener("click", () =>
-                            selectOption(index),
-                        );
-                        optionsContainer.appendChild(optionElement);
-                    });
+                    optionElement.addEventListener("click", () =>
+                        selectOption(index),
+                    );
+                    optionsContainer.appendChild(optionElement);
+                });
 
-                    // Update buttons
-                    prevBtn.disabled = currentQuestion === 0;
+                // Update buttons
+                prevBtn.disabled = currentQuestion === 0;
+                updateNextButton();
+
+                // Restore selection if exists
+                if (userAnswers[currentQuestion] !== undefined) {
+                    selectOption(userAnswers[currentQuestion], false);
+                }
+            }
+
+            function selectOption(index, saveAnswer = true) {
+                // Remove previous selections
+                document.querySelectorAll(".option-item").forEach((item) => {
+                    item.classList.remove("border-green-400", "bg-green-50");
+                    item.classList.add("border-gray-200");
+                    item.querySelector(".option-letter").classList.remove(
+                        "bg-green-500",
+                        "text-white",
+                    );
+                    item.querySelector(".option-letter").classList.add(
+                        "bg-gray-100",
+                        "text-gray-600",
+                    );
+                    item.querySelector(".option-icon").classList.add("hidden");
+                });
+
+                // Select current option
+                const selectedOption = optionsContainer.children[index];
+                selectedOption.classList.remove("border-gray-200");
+                selectedOption.classList.add("border-green-400", "bg-green-50");
+                selectedOption
+                    .querySelector(".option-letter")
+                    .classList.remove("bg-gray-100", "text-gray-600");
+                selectedOption
+                    .querySelector(".option-letter")
+                    .classList.add("bg-green-500", "text-white");
+                selectedOption
+                    .querySelector(".option-icon")
+                    .classList.remove("hidden");
+
+                if (saveAnswer) {
+                    userAnswers[currentQuestion] = index;
                     updateNextButton();
+                }
+            }
 
-                    // Restore selection if exists
-                    if (userAnswers[currentQuestion] !== undefined) {
-                        selectOption(userAnswers[currentQuestion], false);
+            function updateNextButton() {
+                const isLastQuestion =
+                    currentQuestion === shuffledQuizData.length - 1;
+                const hasAnswer = userAnswers[currentQuestion] !== undefined;
+
+                nextBtn.disabled = !hasAnswer;
+
+                if (isLastQuestion) {
+                    nextBtnText.textContent = "Selesai";
+                    nextBtnIcon.className = "fas fa-check ml-2";
+                } else {
+                    nextBtnText.textContent = "Selanjutnya";
+                    nextBtnIcon.className = "fas fa-arrow-right ml-2";
+                }
+            }
+
+            function goToPrevious() {
+                if (currentQuestion > 0) {
+                    currentQuestion--;
+                    showQuestion();
+                }
+            }
+
+            function goToNext() {
+                if (currentQuestion < shuffledQuizData.length - 1) {
+                    currentQuestion++;
+                    showQuestion();
+                } else {
+                    showResults();
+                }
+            }
+
+            function showResults() {
+                progressSection.classList.add("hidden");
+                quizSection.classList.add("hidden");
+                resultsSection.classList.remove("hidden");
+
+                // Calculate results
+                let correctCount = 0;
+                userAnswers.forEach((answer, index) => {
+                    if (answer === shuffledQuizData[index].correct) {
+                        correctCount++;
                     }
+                });
+
+                const wrongCount = shuffledQuizData.length - correctCount;
+                const percentage = Math.round(
+                    (correctCount / shuffledQuizData.length) * 100,
+                );
+
+                // Update results display
+                document.getElementById("final-score").textContent =
+                    percentage + "%";
+                document.getElementById("correct-answers").textContent =
+                    correctCount;
+                document.getElementById("wrong-answers").textContent =
+                    wrongCount;
+                document.getElementById("accuracy").textContent =
+                    percentage + "%";
+
+                // Update score circle
+                const circle = document.getElementById("score-circle");
+                const circumference = 251.2;
+                const offset =
+                    circumference - (percentage / 100) * circumference;
+                setTimeout(() => {
+                    circle.style.strokeDashoffset = offset;
+                }, 500);
+
+                // Result message
+                let message, description;
+                if (percentage >= 90) {
+                    message = "🏆 Luar Biasa!";
+                    description =
+                        "Anda memiliki pengetahuan kesehatan yang sangat baik. Terus pertahankan gaya hidup sehat!";
+                } else if (percentage >= 70) {
+                    message = "👏 Bagus Sekali!";
+                    description =
+                        "Pengetahuan kesehatan Anda sudah cukup baik. Tetap pelajari hal-hal baru tentang kesehatan.";
+                } else if (percentage >= 50) {
+                    message = "📚 Terus Belajar!";
+                    description =
+                        "Ada ruang untuk peningkatan. Pelajari lebih banyak tentang kesehatan untuk hidup yang lebih baik.";
+                } else {
+                    message = "💪 Jangan Menyerah!";
+                    description =
+                        "Ini adalah awal yang baik. Terus belajar tentang kesehatan dan coba lagi!";
                 }
 
-                function selectOption(index, saveAnswer = true) {
-                    // Remove previous selections
-                    document
-                        .querySelectorAll(".option-item")
-                        .forEach((item) => {
-                            item.classList.remove(
-                                "border-green-400",
-                                "bg-green-50",
-                            );
-                            item.classList.add("border-gray-200");
-                            item.querySelector(
-                                ".option-letter",
-                            ).classList.remove("bg-green-500", "text-white");
-                            item.querySelector(".option-letter").classList.add(
-                                "bg-gray-100",
-                                "text-gray-600",
-                            );
-                            item.querySelector(".option-icon").classList.add(
-                                "hidden",
-                            );
-                        });
+                document.getElementById("result-message").textContent = message;
+                document.getElementById("result-description").textContent =
+                    description;
+            }
 
-                    // Select current option
-                    const selectedOption = optionsContainer.children[index];
-                    selectedOption.classList.remove("border-gray-200");
-                    selectedOption.classList.add(
-                        "border-green-400",
-                        "bg-green-50",
-                    );
-                    selectedOption
-                        .querySelector(".option-letter")
-                        .classList.remove("bg-gray-100", "text-gray-600");
-                    selectedOption
-                        .querySelector(".option-letter")
-                        .classList.add("bg-green-500", "text-white");
-                    selectedOption
-                        .querySelector(".option-icon")
-                        .classList.remove("hidden");
+            function showReview() {
+                resultsSection.classList.add("hidden");
+                reviewSection.classList.remove("hidden");
 
-                    if (saveAnswer) {
-                        userAnswers[currentQuestion] = index;
-                        updateNextButton();
-                    }
-                }
+                const reviewContent = document.getElementById("review-content");
+                reviewContent.innerHTML = "";
 
-                function updateNextButton() {
-                    const isLastQuestion =
-                        currentQuestion === shuffledQuizData.length - 1;
-                    const hasAnswer =
-                        userAnswers[currentQuestion] !== undefined;
+                shuffledQuizData.forEach((question, index) => {
+                    const userAnswer = userAnswers[index];
+                    const isCorrect = userAnswer === question.correct;
 
-                    nextBtn.disabled = !hasAnswer;
-
-                    if (isLastQuestion) {
-                        nextBtnText.textContent = "Selesai";
-                        nextBtnIcon.className = "fas fa-check ml-2";
-                    } else {
-                        nextBtnText.textContent = "Selanjutnya";
-                        nextBtnIcon.className = "fas fa-arrow-right ml-2";
-                    }
-                }
-
-                function goToPrevious() {
-                    if (currentQuestion > 0) {
-                        currentQuestion--;
-                        showQuestion();
-                    }
-                }
-
-                function goToNext() {
-                    if (currentQuestion < shuffledQuizData.length - 1) {
-                        currentQuestion++;
-                        showQuestion();
-                    } else {
-                        showResults();
-                    }
-                }
-
-                function showResults() {
-                    progressSection.classList.add("hidden");
-                    quizSection.classList.add("hidden");
-                    resultsSection.classList.remove("hidden");
-
-                    // Calculate results
-                    let correctCount = 0;
-                    userAnswers.forEach((answer, index) => {
-                        if (answer === shuffledQuizData[index].correct) {
-                            correctCount++;
-                        }
-                    });
-
-                    const wrongCount = shuffledQuizData.length - correctCount;
-                    const percentage = Math.round(
-                        (correctCount / shuffledQuizData.length) * 100,
-                    );
-
-                    // Update results display
-                    document.getElementById("final-score").textContent =
-                        percentage + "%";
-                    document.getElementById("correct-answers").textContent =
-                        correctCount;
-                    document.getElementById("wrong-answers").textContent =
-                        wrongCount;
-                    document.getElementById("accuracy").textContent =
-                        percentage + "%";
-
-                    // Update score circle
-                    const circle = document.getElementById("score-circle");
-                    const circumference = 251.2;
-                    const offset =
-                        circumference - (percentage / 100) * circumference;
-                    setTimeout(() => {
-                        circle.style.strokeDashoffset = offset;
-                    }, 500);
-
-                    // Result message
-                    let message, description;
-                    if (percentage >= 90) {
-                        message = "🏆 Luar Biasa!";
-                        description =
-                            "Anda memiliki pengetahuan kesehatan yang sangat baik. Terus pertahankan gaya hidup sehat!";
-                    } else if (percentage >= 70) {
-                        message = "👏 Bagus Sekali!";
-                        description =
-                            "Pengetahuan kesehatan Anda sudah cukup baik. Tetap pelajari hal-hal baru tentang kesehatan.";
-                    } else if (percentage >= 50) {
-                        message = "📚 Terus Belajar!";
-                        description =
-                            "Ada ruang untuk peningkatan. Pelajari lebih banyak tentang kesehatan untuk hidup yang lebih baik.";
-                    } else {
-                        message = "💪 Jangan Menyerah!";
-                        description =
-                            "Ini adalah awal yang baik. Terus belajar tentang kesehatan dan coba lagi!";
-                    }
-
-                    document.getElementById("result-message").textContent =
-                        message;
-                    document.getElementById("result-description").textContent =
-                        description;
-                }
-
-                function showReview() {
-                    resultsSection.classList.add("hidden");
-                    reviewSection.classList.remove("hidden");
-
-                    const reviewContent =
-                        document.getElementById("review-content");
-                    reviewContent.innerHTML = "";
-
-                    shuffledQuizData.forEach((question, index) => {
-                        const userAnswer = userAnswers[index];
-                        const isCorrect = userAnswer === question.correct;
-
-                        const reviewItem = document.createElement("div");
-                        reviewItem.className =
-                            "border-b border-gray-200 pb-6 last:border-b-0";
-                        reviewItem.innerHTML = `
+                    const reviewItem = document.createElement("div");
+                    reviewItem.className =
+                        "border-b border-gray-200 pb-6 last:border-b-0";
+                    reviewItem.innerHTML = `
                         <div class="mb-6">
                             <div class="flex items-center mb-4">
                                 <div class="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xs sm:text-sm mr-2 sm:mr-3 flex-shrink-0">
@@ -992,40 +1201,31 @@
                         </div>
                     `;
 
-                        reviewContent.appendChild(reviewItem);
-                    });
-                }
+                    reviewContent.appendChild(reviewItem);
+                });
+            }
 
-                function backToResults() {
-                    reviewSection.classList.add("hidden");
-                    resultsSection.classList.remove("hidden");
-                }
+            function backToResults() {
+                reviewSection.classList.add("hidden");
+                resultsSection.classList.remove("hidden");
+            }
 
-                function restartQuiz() {
-                    currentQuestion = 0;
-                    userAnswers = [];
-                    quizActive = false;
+            function restartQuiz() {
+                currentQuestion = 0;
+                userAnswers = [];
+                quizActive = false;
 
-                    // Hide all sections except welcome
-                    progressSection.classList.add("hidden");
-                    quizSection.classList.add("hidden");
-                    resultsSection.classList.add("hidden");
-                    reviewSection.classList.add("hidden");
-                    welcomeScreen.classList.remove("hidden");
+                // Hide all sections except welcome
+                progressSection.classList.add("hidden");
+                quizSection.classList.add("hidden");
+                resultsSection.classList.add("hidden");
+                reviewSection.classList.add("hidden");
+                welcomeScreen.classList.remove("hidden");
 
-                    // Reset score circle
-                    const circle = document.getElementById("score-circle");
-                    circle.style.strokeDashoffset = "251.2";
-                }
-            });
-        </script>
-        <footer class="bg-gray-900 text-white py-4 mt-16">
-            <div class="max-w-4xl mx-auto px-4 text-center">
-                <p class="text-gray-400 text-sm">
-                    &copy; 2025 SehatBersama. Quiz Kesehatan untuk Gaya Hidup
-                    Lebih Baik.
-                </p>
-            </div>
-        </footer>
-    </body>
+                // Reset score circle
+                const circle = document.getElementById("score-circle");
+                circle.style.strokeDashoffset = "251.2";
+            }
+        });
+    </script>
 </html>
